@@ -1,0 +1,22 @@
+html, body {margin:0;padding:0;height:100%;overflow:hidden;font-family:Malgun Gothic, �������, dotum,����,sans-serif;}
+body {position:relative;background-color:#46bbff;}
+.wrap {z-index:30;position:relative;width:100%;height:100%;display: block;overflow-x:scroll;}
+.wrap .module_wrap {width:1365px;display: block;height:100%;}
+.module {width:446px;float:left;margin-left:6px;margin-top:7px;}
+.module .header {width:446px;height:31px;font-size:0px;}
+.module .header img {width:446px;height:31px;}
+.module .content {width:444px;background-color:#ffffff;border-left:1px solid #1fa0eb;border-right:1px solid #1fa0eb;border-bottom:1px solid #1fa0eb;}
+.module .content .tbl {width:444px;color:#000000;font-size:14px;}
+.module .content .tbl .tit {height:31px;background-color:#dddddd;text-align:center;font-size:18px;padding: 0 0 4px 0;}
+.module .content .tbl .tit span {font-size:14px;}
+.module .content .tbl .rb_t {height:25px;text-align:center;color:#959595;border-right:1px solid #e1e8ec; border-bottom:1px solid #e1e8ec;padding: 0 0 2px 0;}
+.module .content .tbl .b_t {height:25px;text-align:center;color:#959595; border-bottom:1px solid #e1e8ec;padding: 0 0 2px 0;}
+.module .content .tbl .rb_l {height:31px;text-align:left;border-right:1px solid #e1e8ec; border-bottom:1px solid #e1e8ec;padding: 0 0 2px 8px;}
+.module .content .tbl .rb {height:31px;text-align:center;border-right:1px solid #e1e8ec; border-bottom:1px solid #e1e8ec;padding: 0 0 2px 0;}
+.module .content .tbl .b {height:31px;text-align:left;border-bottom:1px solid #e1e8ec;padding: 0 0 2px 8px;}
+.module .content .txt {font-size:14px;width:414px;padding:8px 15px 10px 15px;line-height:28px;}
+.bg_br {z-index:20;position:absolute;bottom:0;right:0;background:url('../images/bg_br.png');display:block;height:485px;width:688px;}
+.bg_b {z-index:10;position:absolute;bottom:0;background:url('../images/bg_b.png');display:block;height:485px;width:100%;}
+.list_issue_today {display:none}
+.list_issue_tomorrow {display:none}
+.list_notice {display:none}

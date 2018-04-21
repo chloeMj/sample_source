@@ -1,0 +1,35 @@
+ Ext.define('YSYS.model.board.MonitoringModel', {
+    extend: 'Ext.data.Model',
+  
+	fields: [
+	         'bb_id',
+	         'bbm_id',
+	         'ch_div_cd',
+	         'ch_div_nm',
+	         'bbm_titl',
+	         'bbm_writer',
+	         'bbm_ctt',
+	         'bbm_expr_dtm',
+	         'hrnk_bbm_seq',
+	         'lck_user_id',
+	         'lck_user_nm',
+	         'lck_dtm',
+	         'bbm_hits_cnt',
+	         'noti_yn',
+	         'urg_yn',
+	         'chg_lck_yn',
+	         'bbm_del_yn',
+	         'inputr_id',
+	         'inputr_nm',
+	         'input_dtm',
+	         'updtr_id',
+	         'updtr_nm',
+	         'updt_dtm',
+	         'delr_id', 
+	         'del_dtm', 
+	         'reply_id',
+	         'reply', 
+	         'step' ,
+	         'open_yn'
+	]
+ });
