@@ -1,0 +1,99 @@
+
+section.contentSection {
+	overflow-y: auto;
+}
+
+.lineHeight_110 {
+	line-height: 105px;
+}
+
+.width_70 {
+	width: 70%;
+}
+
+.height {
+	height: 100%;
+}
+
+.clear {
+	clear: initial;
+}
+
+.centerContents {
+	color: #e7e6e6;
+	min-height: 600px;
+	display: table;
+}
+
+	.centerContents > .centerContentPanels {
+		/*display: table-cell;*/
+		float: left;
+		height: 100%;
+		display: table-cell;
+		box-sizing: border-box;
+	}
+
+.sideSlipGaugePanel {
+	width: 63%;
+	max-width: 1065px;
+	/*height: 600px;*/
+	height: 100%;
+}
+
+.sideslipGauge_outside {
+	display: table;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url(/assets/image/gauge_sideSlip.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 600px;
+}
+
+.sideslipGauge {
+	margin: 0 auto;
+	width: 500px;
+	/* height: 500px; */
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding-bottom: 93px;
+}
+
+#gauge {
+	min-height: 500px;
+	width: 100%;
+	height: auto;
+}
+
+.sideslipCurrentValue {
+	position: absolute;
+   top: 50%;
+   margin-top: 167px;
+   left: 50%;
+   margin-left: -120px;
+}
+
+.currentValue {
+    width: 230px;
+    text-align: right;
+}
+
+.sideSlipValuePanel {
+	width: 37%;
+	vertical-align: middle;
+	font-size: 65px;
+}
+
+.valueBox {
+	max-width: 500px;
+	min-width: 410px;
+}
+
+.sideSlipValueBox_inside {
+}
+.textAlign_right {
+	text-align: right;
+}

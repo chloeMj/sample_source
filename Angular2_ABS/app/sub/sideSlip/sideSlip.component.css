@@ -1,0 +1,68 @@
+.centerContents {
+	color: #e7e6e6;
+	min-height: 600px;
+	display: table;
+}
+
+	.centerContents > .centerContentPanels {
+		display: table-cell;
+		float: left;
+		height: 100%;
+		box-sizing: border-box;
+	}
+
+.sideSlipGaugePanel {
+	width: 63%;
+	max-width: 1065px;
+	height: 100%;
+}
+
+.sideslipGaugeBg {
+	display: table;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url(/assets/image/gauge_sideSlip.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 600px;
+}
+
+.sideslipGauge {
+	display: table-cell;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding-bottom: 93px;
+}
+
+#gauge {
+	width: 100%;
+	height: auto;
+	min-height: 500px;
+}
+
+.sideslipCurrentValue {
+	position: absolute;
+	top: 50%;
+	margin-top: 167px;
+	left: 50%;
+	margin-left: -120px;
+}
+
+.currentValue {
+    width: 230px;
+    text-align: right;
+}
+
+.sideSlipValuePanel {
+	width: 37%;
+	vertical-align: middle;
+	font-size: 65px;
+}
+
+.valueBox {
+	max-width: 500px;
+	min-width: 410px;
+}

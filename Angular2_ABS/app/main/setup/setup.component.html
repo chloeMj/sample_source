@@ -1,0 +1,143 @@
+<!-- Main content -->
+<section class="contentPanel">
+	<div class="centerPanel">
+		<div class="panel">
+			<div class="inputPanel">
+				<div class="row">
+					<div class="componentPanel">
+						<div class="component">
+							<div class="componentLabel">전체화면모드</div>
+							<div class="componentEl">
+								<select (change)="fullSideSel(selectFullSize.value)" #selectFullSize>
+									<option [value]="true">On</option>
+									<option [value]="false" selected>Off</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel">
+			<div class="inputPanel">
+				<div class="row">
+					<div class="componentPanel">
+						<div class="component">
+							<div class="componentLabel">Baud rate</div>
+							<div class="componentEl">
+								<select (change)="baudSel(selectB.value)" #selectB>
+									<option [value]="0">선택하세요</option>
+									<option [value]="9600">9600</option>
+									<option [value]="115200">115200</option>
+								</select>
+							</div>
+						</div>
+						<div class="component">
+							<div class="componentLabel">사용중인 Baud rate</div>
+							<div class="componentEl">
+								<b>{{usedBaud}}</b>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="componentPanel">
+						<div class="component">
+							<div class="componentLabel">포트선택</div>
+							<div class="componentEl">
+								<select [disabled]="!usedBaud" (change)="portSel(select.value)" #select>
+									<option [value]="0">선택하세요</option>
+									<option *ngFor="let m of portList; let i = index" [value]="m">{{m}}</option>
+								</select>
+							</div>
+						</div>
+						<div style="margin-right: 3px;">
+							<button class="btn" *ngIf="usedPort == ''" (click)="portConnect(select.value)">연결</button>
+							<button class="btn" *ngIf="usedPort != ''" (click)="portClose()">연결끊기</button>
+						</div>
+						<div class="component">
+							<div class="componentLabel">사용중인 Baud 포트</div>
+							<div class="componentEl">
+								<b>{{usedPort}}</b>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="componentPanel">
+						<div class="component">
+							<div class="componentLabel">통합서버 IP</div>
+							<div class="componentEl">
+								<input type="text" #totalServerIp/>
+							</div>
+						</div>
+						<div style="margin-right: 3px;">
+							<button class="btn" *ngIf="connected == ''" (click)="connectTotalServer(totalServerIp.value)">연결</button>
+							<button class="btn" *ngIf="connected" (click)="disconnectTotalServer(totalServerIp.value)">연결끊기</button>
+						</div>
+						<div class="component" *ngIf="connected">
+							<div class="componentLabel">connected</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		<!--
+		<section class="content">
+			<div class="row">
+				<div class="col-12">
+					<label>abs 설정</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<input type="text" placeholder="text" [value]="setup.name" (input)="setup.name = $event.target.value;"/>
+					<button class="btn btn-secondary" type="button" (click)="setupSave()">저장</button>
+
+					<select #select>
+						<option value="1">포트1</option>
+						<option value="2">포트2</option>
+						<option value="3">포트3</option>
+						<option value="4">포트4</option>
+						<option value="5">포트5</option>
+						<option value="6">포트6</option>
+						<option value="7">포트7</option>
+						<option value="8">포트8</option>
+						<option value="9">포트9</option>
+						<option value="10">포트10</option>
+						<option value="11">포트11</option>
+						<option value="12">포트12</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="borderOn" *ngFor='let item of itemlist' dnd-draggable [dragEnabled]="true" [dragData]="item">
+					{{item.name}}
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="borderOn col-12" style="height:100px" dnd-droppable (onDropSuccess)="drog($event)">
+					<div *ngFor='let item of draglist'>
+						{{item.name}}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<label>테스트순서</label>
+				<ul class="list-group" dnd-sortable-container [sortableData]="itemlist">
+					<li class="list-group-item" *ngFor="let item of itemlist; let i = index" dnd-sortable [sortableIndex]="i">
+						<label for="cbx{{item.name}}" class="css-label-sortable">
+							Use {{item.name}}
+						</label>
+						<br /><br />
+						<div class="clear"></div>
+
+					</li>
+				</ul>
+			</div>
+		</section>
+		-->

@@ -1,0 +1,128 @@
+
+section.contentPanel {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	height: 100%;
+	overflow: hidden;
+}
+div.centerPanel {
+	clear: both;
+	/* flex: 1; */
+	height: auto;
+	width: auto;
+	min-height: 675px;
+	padding: 5px;
+}
+div.panel, div.inputPanel, div.componentPanel {
+	clear: both;
+}
+
+div.panel {
+	padding: 10px;
+	/*
+	border: 1px solid;
+	padding-left: 5px;
+	*/
+}
+div.panel:first-child {
+	padding-top: 0;
+}
+
+div.panel > div.inputPanel div.componentPanel {
+	margin-bottom: 10px;
+	display: inline-block;
+}
+div.panel > div.inputPanel:last-child div.componentPanel {
+	margin-bottom: 0;
+}
+
+.testTitle {
+	font-weight: bold;
+	font-size: 1.3em;
+	padding: 10px;
+}
+div.inputPanel div.row {
+	float: left;
+}
+div.subTitle {
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+	div.subTitle::after {
+		/* content: ':'; */
+	}
+	div.subTitle > img.compTitleImg {
+		margin: 0 5px;
+		margin-top: -1px;
+		float: left;
+		height: 21px;
+	}
+
+div.component {
+	clear: both;
+	margin-right: 3px;
+	font-size: 15px;
+}
+	div.component:last-child {
+		margin-right: 0;
+	}
+	div.component > div {
+		display: inline-block;
+		height: 33px;
+	}
+	div.component>div>div {
+		float: left;
+		border: 1px solid #dddddd;
+		box-sizing: border-box;
+		border-radius: 8px;
+	}
+		div.component > div > div.componentLabel {
+			font-weight: bold;
+			background: rgba(49, 49, 49, 0.1);
+			color: #333;
+			min-width: 95px;
+			line-height: 32px;
+			text-align: center;
+			padding: 0 5px;
+			border-top-left-radius: 6px;
+			border-bottom-left-radius: 6px;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;			
+		}
+		div.component > div > div.componentEl {
+			line-height: 32px;
+			width: 200px;
+			text-align: right;
+			border-left: 0;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			border-top-right-radius: 6px;
+			border-bottom-right-radius: 6px;
+		}
+			div.component > div > div.componentEl input {
+				border: 0;
+				padding: 0;
+				padding-left: 5px;
+				height: 30px;
+				line-height: 25px;
+				vertical-align: bottom;
+				text-align: right;
+				border-radius: 5px;
+				width: 190px;
+				margin-right: 5px;
+				max-width: 199px;
+				border-top-right-radius: 6px;
+				border-bottom-right-radius: 6px;
+			}
+
+div.btns {
+	text-align: right;
+	padding: 10px 0;
+	margin-right: 10px;
+}
+	div.btns button {
+		font-size: 30px;
+		padding: 8px 20px;
+	}

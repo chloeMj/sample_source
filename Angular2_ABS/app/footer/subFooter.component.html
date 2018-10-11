@@ -1,0 +1,106 @@
+<div class="subFooter">
+	<div class="subFooterBg">
+		<div class="testStatus">
+			<div class="carType">
+				<span>오스틴 7(Austin 7)</span>
+			</div>
+			<div class="buttons">
+				<div class="buttonsBox">
+					<div class="btn" (click)="goHome()">
+						<fa name="times-circle" style="color:red;"></fa>&nbsp;검사중지
+					</div>
+					<div class="btn">
+						<fa name="refresh"></fa>&nbsp;다시한번
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="testProgress">
+			<div class="testProgressTable">
+				<div class="testProgressTBody">
+					<div class="testProgressTRow testPregressHeaderRow">
+						<div class="cell header-cell col1 first_cell" [ngClass]="{'disable':testList.sideSlip === false}">
+							<span>
+								A</span>
+							<div class="progressHeader sideSlip" [ngClass]="{'processing':toProcessing === 11,'resultHide':toProcessing === 11 && processingToggle == 1, 'processed': processed[11] == 1}"></div>
+						</div>
+						<div class="cell header-cell col3 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<span>F1</span>
+							<div class="progressHeader brake" [ngClass]="{'processing':toProcessing === 21,'resultHide':toProcessing === 21 && processingToggle == 1, 'processed': processed[21] == 1}"></div>
+						</div>
+						<div class="cell header-cell col4 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<span>F2</span>
+							<div class="progressHeader brake" [ngClass]="{'processing':toProcessing === 22,'resultHide':toProcessing === 22 && processingToggle == 1, 'processed': processed[22] == 1}"></div>
+						</div>
+						<div class="cell header-cell col5 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<span>R1</span>
+							<div class="progressHeader brake" [ngClass]="{'processing':toProcessing === 23,'resultHide':toProcessing === 23 && processingToggle == 1, 'processed': processed[23] == 1}"></div>
+						</div>
+						<div class="cell header-cell col6 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<span>R2</span>
+							<div class="progressHeader brake" [ngClass]="{'processing':toProcessing === 24,'resultHide':toProcessing === 24 && processingToggle == 1, 'processed': processed[24] == 1}"></div>
+						</div>
+						<div class="cell header-cell col7 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<span>R3</span>
+							<div class="progressHeader brake" [ngClass]="{'processing':toProcessing === 25,'resultHide':toProcessing === 25 && processingToggle == 1, 'processed': processed[25] == 1}"></div>
+						</div>
+						<div class="cell header-cell col8 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<span>P</span>
+							<div class="progressHeader brake brake_cell"></div>
+						</div>
+						<div class="cell header-cell col9 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<span>BT</span>
+							<div class="progressHeader brake brake_cell"></div>
+						</div>
+						<div class="cell header-cell col10 speed_cell" [ngClass]="{'disable':testList.speed === false}">
+							<span>S</span>
+							<div class="progressHeader speed" [ngClass]="{'processing':toProcessing === 31,'resultHide':toProcessing === 31 && processingToggle == 1, 'processed': processed[31] == 1}"></div>
+						</div>
+						<div class="cell header-cell col11 last_cell">
+							<span>T</span>
+							<div class="progressHeader total" [ngClass]="{'processing':toProcessing === 41,'resultHide':toProcessing === 41 && processingToggle == 1, 'processed': processed[41] == 1}"></div>
+						</div>
+					</div>
+					<div class="testProgressTRow">
+						<div class="cell col1 first_cell sideSlip_cell" [ngClass]="{'disable':testList.sideSlip === false}">
+							<div class="display_inlineBlock" [ngClass]="(nowResult.sideSlip_result[0].result=='1')?'circle':(nowResult.sideSlip_result[0].result=='2')?'times':''"></div>
+						</div>
+						<div class="cell col2 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<div class="display_inlineBlock" [ngClass]="(nowResult.brake_result[0].result=='1')?'circle':(nowResult.brake_result[0].result=='2')?'times':''"></div>
+						</div>
+						<div class="cell col3 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<div class="display_inlineBlock" [ngClass]="(nowResult.brake_result[1].result=='1')?'circle':(nowResult.brake_result[1].result=='2')?'times':''"></div>
+						</div>
+						<div class="cell col4 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<div class="display_inlineBlock" [ngClass]="(nowResult.brake_result[2].result=='1')?'circle':(nowResult.brake_result[2].result=='2')?'times':''"></div>
+						</div>
+						<div class="cell col5 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<div class="display_inlineBlock" [ngClass]="(nowResult.brake_result[3].result=='1')?'circle':(nowResult.brake_result[3].result=='2')?'times':''"></div>
+						</div>
+						<div class="cell col6 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<div class="display_inlineBlock" [ngClass]="(nowResult.brake_result[4].result=='1')?'circle':(nowResult.brake_result[4].result=='2')?'times':''"></div>
+						</div>
+						<div class="cell col7 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<div class="display_inlineBlock" [ngClass]="(nowResult.parking_result=='1')?'circle':(nowResult.parking_result=='2')?'times':''"></div>
+						</div>
+						<div class="cell col8 brake_cell" [ngClass]="{'disable':testList.brake === false}">
+							<div class="display_inlineBlock" [ngClass]="(nowResult.bt_result=='1')?'circle':(nowResult.bt_result=='2')?'times':''"></div>
+						</div>
+						<div class="cell col9 speed_cell" [ngClass]="{'disable':testList.speed === false}">
+							<div class="display_inlineBlock" [ngClass]="(nowResult.speed_result.result=='1')?'circle':(nowResult.speed_result.result=='2')?'times':''"></div>
+						</div>
+						<div class="cell col10 last_cell">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="position:absolute; bottom:0; display:none;">
+		<button class="testBtn1" onclick="location.href='http://127.0.0.1:4300/#/sub/sideSlip'">side slip</button>
+		<button class="testBtn2" onclick="location.href='http://127.0.0.1:4300/#/sub/brake'">brake</button>
+		<button class="testBtn2" onclick="location.href='http://127.0.0.1:4300/#/sub/speed'">SPEED</button>
+		<button class="testBtn2" onclick="location.href='http://127.0.0.1:4300/#/sub/result'">result</button>
+	</div>
+</div>

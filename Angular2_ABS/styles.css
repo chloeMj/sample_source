@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+.bd-navbar {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1071;
+}
+
+.bd-navbar {
+	min-height: 4rem;
+	background: #d0e4f7; /* Old browsers */
+	background: -moz-linear-gradient(top, #d0e4f7 0%, #73b1e7 24%, #0a77d5 61%, #539fe1 79%, #87bcea 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #d0e4f7 0%,#73b1e7 24%,#0a77d5 61%,#539fe1 79%,#87bcea 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #d0e4f7 0%,#73b1e7 24%,#0a77d5 61%,#539fe1 79%,#87bcea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', endColorstr='#87bcea',GradientType=0 ); /* IE6-9 */
+	box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+	color: #ffffff;
+}
+.bd-navbar li.logo {
+	line-height: inherit;
+	color: #ffffff;
+}
+
+.bd-navbar li.nav-link {
+	line-height: inherit;
+	color: #ffffff;
+}
+
+
+
+
+.bd-navbar li.sub {
+	cursor: pointer;
+	padding-left: 50px;
+}
+
+.pointCursor {
+	cursor: pointer;
+}
+
+.borderOn {
+	border: 2px solid red;
+}

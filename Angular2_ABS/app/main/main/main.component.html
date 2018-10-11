@@ -1,0 +1,258 @@
+<section class="contentSection">
+	<header class="main-header">
+		<div class="navbar">
+			<div class="navTitle">
+				<div name="logo" class="mainLogo">
+				</div>
+				<div class="systemName">
+					ABS
+				</div>
+				<div class="versionInfo">
+					v 1.0.1
+				</div>
+				{{test}}
+			</div>
+			<div class="menus">
+				<!--
+				//자동검사 모드가 on일 때에 표시
+				<div class="autoMode">
+					자동검사 <span name=autoMode></span>
+				</div>
+				-->
+				<button #settingPopBtn name="settingPopupBox" popupTitle="설정" href="#" class="btn" (click)="clickSettingBtn(settingPopBtn)"><fa name="cog"></fa>&nbsp;설정</button>
+				<button type="button" name="" class="btn" (click)="fullscreen()" style="display:none;">
+					<fa name="window-maximize"></fa>&nbsp;전체화면
+				</button>
+				<!-- <button type="button" name="" class="btn">
+					<fa name="print"></fa>&nbsp;자료출력
+				</button> -->
+				<button type="button" name="" class="btn">
+					<fa name="times" style="color:red;"></fa>&nbsp;종료
+				</button>
+			</div>
+		</div>
+	</header>
+	<div class="centerContents_outside">
+		<div class="centerContents">
+			<div class="centerContentPanel">
+				<div class="compPanel carListPanel">
+					<div>
+						<div class="panelTitle"><img class="panelTitleImg" src="/assets/image/bar_vertical_2.png">차량대기목록</div>
+						<div class="compContentPanel carList">
+							<table>
+								<thead>
+									<tr>
+										<th style="width: 200px;"> 
+											접수번호
+											<!-- 15자(숫자) -->
+										</th>
+										<th style="width: 160px;">
+											차량번호
+											<!-- 10자(한글 3 포함)) -->
+										</th>
+										<th style="width: 105px;">
+											검사종류
+											<!-- 5글자 -->
+										</th>
+										<th style="width: 105px;">
+											상태
+											<!-- 
+											전송 완료
+											전송 중
+											미전송
+											전송 실패
+											검사 중
+											검사 대기
+											오류
+											5글자
+											-->
+										</th>
+										<th style="width: 20px;">
+											A
+											<!-- O, X -->
+										</th>
+										<th style="width: 20px;">
+											B
+											<!-- O, X -->
+										</th>
+										<th style="width: 20px;">
+											S
+											<!-- O, X -->
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr [attr.data-index]="i" *ngFor="let m of carList; let i = index" (mouseover)="mouseOverRow($event)" (mouseout)="mouseOutRow($event)" (click)="selectCarListRow($event,m)">
+										<td>
+											{{m.acceptNumber}}
+										</td>
+										<td>{{m.carNumber}}</td>
+										<td>{{m.checkType}}</td>
+										<td>{{m.result_a}}</td>
+										<td>{{m.result_b}}</td>
+										<td>{{m.result_s}}</td>
+										<td>{{m.status}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="centerContentPanel">
+				<div class="compPanel">
+					<div>
+						<div class="panelTitle">&nbsp;</div>
+						<div class="compContentPanel testPanel">
+							<div>
+								<div name="inputValForm" class="inputValForm">
+									<div class="comp">
+										<div class="compTitle"><img class="compTitleImg" src="/assets/image/circle_small.png">구동축설정</div>
+										<!-- <div class="compInput selectAxisComp">
+											<div name="auto" (click)="clickSelectAxis('auto')" class="selected">
+												자동
+											</div>
+											<div name="manual" (click)="clickSelectAxis('manual')">
+												수동
+											</div>
+										</div> -->
+										<div class="compInput manualAxisItems">
+											<div (click)="axle = 1">
+												<label><input type="radio" name="axle" [checked]="axle == 1" value="1"> 후륜</label>
+											</div>
+											<div (click)="axle = 2">
+												<label><input type="radio" name="axle" [checked]="axle == 2" value="2"> 전륜</label>
+											</div>
+											<div (click)="axle = 3">
+												<label><input type="radio" name="axle" [checked]="axle == 3" value="3"> 4WD</label>
+											</div>
+										</div>
+									</div>
+									<div class="comp">
+										<div class="compTitle"><img class="compTitleImg" src="/assets/image/circle_small.png">축설정</div>
+										<div class="compInput">
+											<div (click)="carType = 1">
+												<label><input type="radio" name="carType" [checked]="carType == 1" value="1"> 1F1R</label>
+											</div>
+											<div (click)="carType = 2">
+												<label><input type="radio" name="carType" [checked]="carType == 2" value="2"> 1F2R</label>
+											</div>
+											<div (click)="carType = 5">
+												<label><input type="radio" name="carType" [checked]="carType == 5" value="5">  2F2R</label>
+											</div>
+											<div (click)="carType = 6">
+												<label><input type="radio" name="carType" [checked]="carType == 6" value="6">  2F3R</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="alignCenter">
+									<button type="button" name="autoCheck" class="btn bigBtn" [ngClass]="{'checkBtnActive':checkMode === 1}" (click)="autoCheckStart()">
+										<fa name="play-circle"></fa>&nbsp;자동검사
+									</button>
+									<!--
+										//자동검사 모드가 on일 때에 비활성화 
+										<button type="button" #indiPopBtn name="indiPop" popupTitle="독립검사" class="btn bigBtn" [ngClass]="{'checkBtnActive':checkMode === 1, 'disable': autoMode === 1}" [disabled]="autoMode === 1" (click)="clickIndiBtn(indiPopBtn)"> 
+									-->
+									<button type="button" #indiPopBtn name="indiPop" popupTitle="독립검사" class="btn bigBtn" [ngClass]="{'checkBtnActive':checkMode === 1}" (click)="clickIndiBtn(indiPopBtn)">
+										<fa name="play-circle"></fa>&nbsp;독립검사
+									</button>
+								</div>
+							</div>
+							<div name="buttons" class="bottomBtns buttons clear_both">
+								<div class="floatRight">
+									<button type="button" name="adjust" class="btn adjust" [ngClass]="{'checkBtnActive':checkMode === 2}" (click)="adjustStart()">
+										<fa name="wrench"></fa>&nbsp;교정 모드
+									</button>
+									<button type="button" name="degree" class="btn degree" [ngClass]="{'checkBtnActive':checkMode === 3}" (click)="degreeStart()">
+										<fa name="crosshairs"></fa>&nbsp;정도 검사
+									</button>
+									<!-- <button type="button" name="" class="btn ">
+										<fa name="user-md"></fa>&nbsp;고장 진단
+									</button> -->
+
+									<button type="button" name="analogTest" class="btn analogTest" (click)="routerLink('main/analogTest')" style="display: none;">
+										<fa name="sliders"></fa>&nbsp;동작 검사
+									</button>
+									<button type="button" name="result" class="btn result" (click)="routerLink('sub/result')" style="display: none;">
+										<fa name="sliders"></fa>&nbsp;결과
+									</button>
+									<button type="button" name="result" class="btn sideSlip" (click)="routerLink('sub/sideSlip')" style="display: none;">
+										<fa name="sliders"></fa>&nbsp;사이드슬립
+									</button>
+									<button type="button" name="result" class="btn sideSlip" (click)="routerLink('sub/awdBrake')" style="display: none;">
+										<fa name="sliders"></fa>&nbsp;4WD
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="PopupBox" class="popupBox" style="display: none;">
+		<div class="popupBg"></div>
+		<div id="PopupBoxWin" class="popLayer">
+			<div class="popupWrap">
+				<div id="PopupBoxWinHeader" class="popupTitle">
+					<span class="floatLeft" name="popupTitle"></span>
+					<div class="btn-r">
+						<a href="#" class="closeBtn">x</a>
+					</div>
+				</div>
+				<div id="popupBoxContents" class="popupContents">
+				</div>
+				<div class="popupFooter" style="display:none;">
+					<div class="btn-r">
+						<a href="#" class="closeBtn">닫기</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popupBoxChild" id="indiPopContent">
+		<div class="selectedCarInfo">
+			<span name="selectedCarNum"></span>을 검사합니다.
+		</div>
+		<div class="indiContent">
+			<span (click)="clickIndiCheck($event)"><input type="checkbox" name="indiCheck" value="sideSlip" checked> 사이드슬립</span>
+			<span (click)="clickIndiCheck($event)"><input type="checkbox" name="indiCheck" value="brake" checked> 브레이크</span>
+			<span (click)="clickIndiCheck($event)"><input type="checkbox" name="indiCheck" value="speed" checked> 속도</span>
+		</div>
+		<div class="text_center">
+			<button class="btn" (click)="startEachTest()">시작</button>
+			<button class="btn closeBtn">닫기</button>
+		</div>
+	</div>
+	
+	<div class="popupBoxChild" id="settingPopContent">
+		<div class="tabPanel">
+			<div class="tabTitles">
+				<div style="padding: 5px 0 0 5px;">
+					<div id="settingTabTitle" name="setting" class="tab_title" (click)="clickTabTitle('settingTabTitle')">
+						환경설정
+					</div>
+					<div id="referenceConfigTabTitle" name="referenceConfig" class="tab_title" (click)="clickTabTitle('referenceConfigTabTitle')">
+						기준값 설정
+					</div>
+				</div>
+			</div>
+			<div class="tabContents">
+				<div id="setting" class="tab">
+					<div>
+						<setup></setup>
+					</div>
+				</div>
+				<div id="referenceConfig" class="tab">
+					<div>
+						<referenceConfig></referenceConfig>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>

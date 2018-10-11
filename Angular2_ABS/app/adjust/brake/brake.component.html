@@ -1,0 +1,172 @@
+
+<!-- Main content -->
+<section class="contentSection">
+	<header class="adjust-header">
+		<adjust-header></adjust-header>
+	</header>
+	<div class="contentBox">
+		<div class="centerContents_outside">
+			<div class="centerContents">
+				<div class="gaugePanel">
+					<div class="gaugeTitle">
+						축중
+					</div>
+					<div class="lineGaugePanel">
+						<div class="lineGaugeBg weight">
+							<div class="lineGaugeComp">						
+								<dx-circular-gauge class="gauge" [value]="weightValue.mean" [subvalues]="weightValue.mean">
+									<dxo-scale [startValue]="0" [endValue]="weightValue.endValue" [tickInterval]="weightValue.tick">
+										<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+										<dxo-label [font]="{color:'#e7e6e6', size:'30px'}" [visible]="false"></dxo-label>
+									</dxo-scale>
+									<dxo-geometry [startAngle]="-132"
+													[endAngle]="-48">
+									</dxo-geometry>
+									<dxo-range-container width="0" [offset]="-65">
+										<dxi-range [startValue]="0" [endValue]="1000" color="#f44242"></dxi-range>
+										<dxi-range [startValue]="1000" [endValue]="2000" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="2000" [endValue]="3000" color="#4ff441"></dxi-range>
+										<dxi-range [startValue]="3000" [endValue]="4000" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="4000" [endValue]="5000" color="#f44242"></dxi-range>
+									</dxo-range-container>
+									<dxo-value-indicator type="TriangleNeedle" color="#fa2626" secondColor="#FF0000" [baseValue]=0 width="30" spindleSize="30" offset="70">
+									</dxo-value-indicator>
+									<dxo-subvalue-indicator type="TriangleNeedle"
+															color="#8ba09d" width="15" offset="120"
+															spindleGapSize="20" spindleSize="15">
+									</dxo-subvalue-indicator>
+								</dx-circular-gauge>
+							</div>
+							<div class="brakeCurrentValue">
+								<div class="currentValue">
+									<b>{{weightValue.mean}}</b>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="brakeAdjust">
+						<div class="brakeAdjust_input">
+							<input type="number" #weightAdjustInput />Kg
+						</div>
+						<div class="brakeAdjust_btns">
+							<div>
+								<button class="btn btn-secondary" type="button" (click)="weightAdjust(weightAdjustInput.value)">축중교정</button>
+							</div>
+							<div>
+								<button class="btn btn-secondary" type="button" (click)="weightZeroVal()">축중영점</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gaugePanel">
+					<div class="gaugeTitle">
+						LEFT
+					</div>
+					<div class="lineGaugePanel">
+						<div class="lineGaugeBg">
+							<div class="lineGaugeComp">
+								<dx-circular-gauge class="gauge" [value]="leftValue.mean" [subvalues]="leftValue.mean">
+									<dxo-scale [startValue]="0" [endValue]="leftValue.endValue" [tickInterval]="leftValue.tick">
+										<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+										<dxo-label [font]="{color:'#e7e6e6', size:'30px'}" [visible]="false"></dxo-label>
+									</dxo-scale>
+									<dxo-geometry [startAngle]="-132"
+													[endAngle]="-48">
+									</dxo-geometry>
+									<dxo-range-container width="0" [offset]="-65">
+										<dxi-range [startValue]="0" [endValue]="500" color="#f44242"></dxi-range>
+										<dxi-range [startValue]="500" [endValue]="1000" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="1000" [endValue]="1500" color="#4ff441"></dxi-range>
+										<dxi-range [startValue]="1500" [endValue]="2000" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="2000" [endValue]="2500" color="#f44242"></dxi-range>
+									</dxo-range-container>
+									<dxo-value-indicator type="TriangleNeedle" color="#fa2626" secondColor="#FF0000" [baseValue]=0 width="30" spindleSize="30" offset="70">
+									</dxo-value-indicator>
+									<dxo-subvalue-indicator type="TriangleNeedle"
+															color="#8ba09d" width="15" offset="120"
+															spindleGapSize="20" spindleSize="15">
+									</dxo-subvalue-indicator>
+								</dx-circular-gauge>
+							</div>
+							<div class="brakeCurrentValue">
+								<div class="currentValue">
+									<b>{{leftValue.mean}}</b>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="brakeAdjust">
+						<div class="brakeAdjust_input">
+							<input type="number" #leftAdjustInput />Kg
+						</div>
+						<div class="brakeAdjust_btns">
+							<div>
+								<button class="btn btn-secondary" type="button" (click)="leftAdjust(leftAdjustInput.value)">left교정</button>
+							</div>
+							<div>
+								<button class="btn btn-secondary" type="button" (click)="brakeLeftZeroVal()">left영점</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gaugePanel">
+					<div class="gaugeTitle">
+						RIGHT
+					</div>
+					<div class="lineGaugePanel">
+						<div class="lineGaugeBg">
+							<div class="lineGaugeComp">
+								<dx-circular-gauge class="gauge" [value]="rightValue.mean" [subvalues]="rightValue.mean">
+									<dxo-scale [startValue]="0" [endValue]="rightValue.endValue" [tickInterval]="rightValue.tick">
+										<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+										<dxo-label [font]="{color:'#e7e6e6', size:'30px'}" [visible]="false"></dxo-label>
+									</dxo-scale>
+									<dxo-geometry [startAngle]="-132"
+													[endAngle]="-48">
+									</dxo-geometry>
+									<dxo-range-container width="0" [offset]="-65">
+										<dxi-range [startValue]="0" [endValue]="500" color="#f44242"></dxi-range>
+										<dxi-range [startValue]="500" [endValue]="1000" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="1000" [endValue]="1500" color="#4ff441"></dxi-range>
+										<dxi-range [startValue]="1500" [endValue]="2000" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="2000" [endValue]="2500" color="#f44242"></dxi-range>
+									</dxo-range-container>
+									<dxo-value-indicator type="TriangleNeedle" color="#fa2626" secondColor="#FF0000" [baseValue]=0 width="30" spindleSize="30" offset="70">
+									</dxo-value-indicator>
+									<dxo-subvalue-indicator type="TriangleNeedle"
+															color="#8ba09d" width="15" offset="120"
+															spindleGapSize="20" spindleSize="15">
+									</dxo-subvalue-indicator>
+								</dx-circular-gauge>
+							</div>
+							<div class="brakeCurrentValue">
+								<div class="currentValue">
+									<b>{{rightValue.mean}}</b>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="brakeAdjust">
+						<div class="brakeAdjust_input">
+							<input type="number" #rightAdjustInput />Kg
+						</div>
+						<div class="brakeAdjust_btns">
+							<div>
+								<button class="btn btn-secondary" type="button" (click)="rightAdjust(rightAdjustInput.value)">right교정</button>
+							</div>
+							<div>
+								<button class="btn btn-secondary" type="button" (click)="brakeRightZeroVal()">right영점</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<analogTest></analogTest>
+	</div>
+</section>
+	<!-- /.content -->
+
+
+
+

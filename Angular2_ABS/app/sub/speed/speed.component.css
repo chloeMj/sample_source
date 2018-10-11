@@ -1,0 +1,74 @@
+
+#gauge {
+	min-height: 500px;
+	width: 100%;
+	height: auto;
+}
+
+.speedValGauge {
+	margin: 0 auto;
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding-bottom: 95px;
+}
+
+.speedGaugePanel {
+	width: 63%;
+	/*height: 600px;*/
+	height: 100%;
+}
+.speedValGaugeBg.for60{
+	background-image: url(/assets/image/gauge_speed_60.png);	
+}
+.speedValGaugeBg.for40{
+	background-image: url(/assets/image/gauge_speed_40.png);	
+}
+.speedValGaugeBg {
+	display: table;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url(/assets/image/gauge_speed_150.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 600px;
+}
+.currentValue {
+	position: absolute;
+    top: 50%;
+    margin-top: 167px;
+    left: 50%;
+    margin-left: -180px;
+    width: 290px;
+    text-align: right;
+    color: #e7e6e6;
+}
+
+div.limitValBox {
+	position: relative;
+	width: 570px;
+	height: initial;
+	border-radius: 8px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.23);
+	text-align: center;
+	font-size: 60px;
+}
+
+	div.limitValBox .limitValTitle {
+		background: #1d252c;
+		color: #dcdcdc;
+		border: 1px solid #1d252c;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+
+	div.limitValBox .limitValContents {
+		line-height: 100px;
+		background: white;
+		border: 1px solid #1d252c;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
+

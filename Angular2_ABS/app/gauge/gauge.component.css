@@ -1,0 +1,18 @@
+#gauge {
+	height: 440px;
+	width: 100%;
+}
+
+.content-bottom {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	height: 15%;
+	width: 100%;
+	background: #004cc9;
+	color: white;
+}
+
+tbody.tableBlack > tr > td{
+	background-color: #1E1E1E;
+}

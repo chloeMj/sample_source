@@ -1,0 +1,21 @@
+.floatLeft {
+	float: left;
+}
+
+
+.navbar {
+	width: 100%;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.logo {
+	font-size: 50px;
+	margin-right: 60px;
+}
+
+.mainMenu {
+	width: 170px;
+	font-size: 27px;
+	margin-right: 30px;
+}

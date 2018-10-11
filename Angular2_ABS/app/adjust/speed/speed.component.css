@@ -1,0 +1,121 @@
+
+.centerContents_outside {
+	margin-top:0;
+}
+.centerContents {
+	color: #e7e6e6;
+	min-height: 600px;
+}
+
+	.centerContents > .centerContentPanels {
+		/*display: table-cell;*/
+		float: left;
+		height: 100%;
+	}
+
+.speedGaugePanel {
+	width: 63%;
+	height: 100%;
+}
+
+.speedGauge_outside {
+	position: relative;
+	display: table;
+	width: 100%;
+	min-height: 600px;
+	height: 100%;
+	background-image: url(/assets/image/gauge_speed_150.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 600px;
+}
+
+.speedValGauge {
+	display: table-cell;
+	margin: 0 auto;
+	width: 500px;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding-bottom: 93px;
+}
+#gauge {
+	min-height: 500px;
+	width: 100%;
+	height: auto;
+}
+
+.speedCurrentValue {
+	position: absolute;
+    top: 50%;
+    margin-top: 167px;
+    left: 50%;
+    margin-left: -180px;
+}
+
+.currentValue {
+    width: 290px;
+    text-align: right;
+    color: #e7e6e6;
+}
+
+.speedValuePanel {
+	width: 37%;
+	vertical-align: middle;
+	font-size: 3.8em;
+}
+
+div.adjustBtns {
+	display: flex;
+	max-width: 500px;
+	height: 142px;
+	padding: 5px;
+	background: #eaeaea;
+	border: 1px solid #8e8e8e;
+	border-radius: 8px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.30), 0 3px 6px rgba(0,0,1,0.30);
+	box-sizing: border-box;
+}
+
+	div.adjustBtns > div.adjustValues {
+		flex: 1;
+	}
+
+		div.adjustBtns > div.adjustValues .row {
+			height: 50%;
+			display: flex;
+			padding-bottom: 2px;
+		}
+
+			div.adjustBtns > div.adjustValues .row:last-child {
+				padding-top: 2px;
+				padding-bottom: 0;
+				box-sizing: border-box;
+			}
+
+			div.adjustBtns > div.adjustValues .row div {
+				flex: 1;
+				background: white;
+				color: #000;
+				font-size: 45px;
+				border: 2px solid #1d252c;
+				border-radius: 8px;
+				box-sizing: border-box;
+				margin-right: 5px;
+				text-align: right;
+			}
+
+				div.adjustBtns > div.adjustValues .row div > input[type="number"] {
+					width: 60%;
+					height: 55px;
+					font-size: 50px;
+					border: 0;
+					text-align: right;
+				}
+
+			div.adjustBtns > div.adjustValues .row button {
+				width: 125px;
+				font-size: 25px;
+				border-radius: 8px;
+				border-width: 2px;
+			}

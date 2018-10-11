@@ -1,0 +1,118 @@
+
+<!-- Content Header (Page header) -->
+<!--<aside class="main-sidebar">
+	<app-menubar></app-menubar>
+</aside>-->
+<div class="section" style="margin: 0 auto; height:95%">
+	<!--컨텐츠들 -->
+	<section class="content">
+		<div class="row">
+			<div class="col">
+				<button type="button" class="btn btn-secondary pointCursor" (click)="writeCreate(1)">
+					사이드슬립값 합격생성 & 사이드슬립out센서 보내기
+				</button>
+				<button type="button" class="btn btn-secondary pointCursor" (click)="writeCreate(2)">
+					사이드슬립값 불합격생성 & 사이드슬립out센서 보내기
+				</button>
+
+				<button type="button" class="btn btn-secondary pointCursor" (click)="writeCreate(3)">
+					브레이크포토ON & 축중데이터 생성
+				</button>
+				<button type="button" class="btn btn-secondary pointCursor" (click)="writeCreate(4)">
+					브레이크 좌우 데이터 생성
+				</button>
+				<button type="button" class="btn btn-secondary pointCursor" (click)="writeCreate(5)">
+					브레이크 풀기 생성
+				</button>
+				<button type="button" class="btn btn-secondary pointCursor" (click)="writeCreate(6)">
+					스피드on센서 보내기
+				</button>
+				<button type="button" class="btn btn-secondary pointCursor" (click)="writeCreate(7)">
+					스피드값 생성
+				</button>
+				<button type="button" class="btn btn-secondary pointCursor" (click)="writeCreate(8)">
+					스피드값 낮추기
+				</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2">포트선택</div>
+			<select class="col-2" (change)="portSel(select.value)" #select>
+				<option [value]="0">선택하세요</option>
+				<option *ngFor="let m of portList; let i = index" [value]="m">{{m}}</option>
+			</select>
+			<div class="col-2">사용중인 포트 <b>{{usedPort}}</b></div>
+			<button type="button" class="btn btn-danger pointCursor offset-4" (click)="writeCreate(0)">
+				RS초기화
+			</button>
+			<button type="button" class="btn btn-danger pointCursor offset-4" (click)="writeCreate(100)">
+				초기화
+			</button>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<label>입력</label>
+				<table class="table table-bordered text-center">
+					<thead>
+						<tr>
+							<th scope="col">A In</th>
+							<th scope="col">A Out</th>
+							<th scope="col">B Photo</th>
+							<th scope="col">S Photo</th>
+							<th scope="col">B Limit</th>
+							<th scope="col">S Limit</th>
+							<th scope="col">6</th>
+							<th scope="col">7</th>
+							<th scope="col">8</th>
+							<th scope="col">9</th>
+							<th scope="col">10</th>
+							<th scope="col">11</th>
+							<th scope="col">12</th>
+							<th scope="col">13</th>
+							<th scope="col">14</th>
+							<th scope="col">15</th>
+						</tr>
+					</thead>
+					<tbody class="tableBlack">
+						<tr>
+							<td *ngFor="let m of input.di"><div [ngClass]="{'inputLedOn':m === '1','inputLedOff':m === '0'}"></div></td>
+						</tr>
+					</tbody>
+				</table>
+				<label>출력</label>
+				<table class="table table-bordered text-center">
+					<thead>
+						<tr>
+							<th scope="col">B Motor</th>
+							<th scope="col">B Up</th>
+							<th scope="col">B Down</th>
+							<th scope="col">S Up</th>
+							<th scope="col">S Down</th>
+							<th scope="col">5</th>
+							<th scope="col">6</th>
+							<th scope="col">7</th>
+							<th scope="col">8</th>
+							<th scope="col">9</th>
+							<th scope="col">10</th>
+							<th scope="col">11</th>
+							<th scope="col">12</th>
+							<th scope="col">13</th>
+							<th scope="col">14</th>
+							<th scope="col">15</th>
+						</tr>
+					</thead>
+					<tbody class="tableBlack">
+						<tr>
+							<td *ngFor="let m of input.do"><div [ngClass]="{'inputLedOn':m === '1','inputLedOff':m === '0'}"></div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</section>
+</div>
+		<!--<footer class="main-footer">
+		<app-footer></app-footer>
+	</footer>-->

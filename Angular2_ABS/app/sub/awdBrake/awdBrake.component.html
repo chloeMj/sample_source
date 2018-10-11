@@ -1,0 +1,385 @@
+<!-- Main content -->
+<section class="contentSection">
+	<div class="contentBox">
+		<div class="topMsgBar">
+			<div class="width_20">
+				<div class="padding_right_10">
+					<div class="testName msgBox lineHeight_110">
+						<b>43바2128</b>
+					</div>
+				</div>
+			</div>
+			<div class="flex_1">
+				<div>
+					<div class="statusText msgBox lineHeight_110">
+						<b>진입하세요</b>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="centerContents_outside">
+			<div class="centerContents">
+				<div class="centerContentPanel awdPanel">
+					<div class="centerContentPanel_child">
+						<div class="awdBrakeGaugePanel left">
+							<div class="awdBrakeGauge_outside">
+								<div class="awdBrakeGauge">
+									<dx-circular-gauge class="gauge" [value]="leftValue.mean" [subvalues]="leftValue.subValue">
+										<dxo-scale [startValue]="0" [endValue]="2500" [tickInterval]="1000">
+											<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+											<dxo-label [font]="{color:'#e7e6e6', size:'30px'}" [visible]="false"></dxo-label>
+										</dxo-scale>
+										<dxo-geometry [startAngle]="-132"
+													  [endAngle]="-48">
+										</dxo-geometry>
+										<dxo-range-container width="0" [offset]="-65">
+											<dxi-range [startValue]="0" [endValue]="500" color="#f44242"></dxi-range>
+											<dxi-range [startValue]="500" [endValue]="1000" color="#FFFF00"></dxi-range>
+											<dxi-range [startValue]="1000" [endValue]="1500" color="#4ff441"></dxi-range>
+											<dxi-range [startValue]="1500" [endValue]="2000" color="#FFFF00"></dxi-range>
+											<dxi-range [startValue]="2000" [endValue]="2500" color="#f44242"></dxi-range>
+										</dxo-range-container>
+										<dxo-value-indicator type="TriangleNeedle" color="#fa2626" secondColor="#FF0000" [baseValue]=0 width="30" spindleSize="30" offset="70">
+										</dxo-value-indicator>
+										<dxo-subvalue-indicator type="TriangleNeedle"
+																color="#8ba09d" width="15" offset="120"
+																spindleGapSize="20" spindleSize="15">
+										</dxo-subvalue-indicator>
+									</dx-circular-gauge>
+								</div>
+								<div class="awdBrakeCurrentValue">
+									<div class="axisValue currentValue">
+										<b>{{leftVal}}</b> kg
+									</div>
+								</div>
+							</div>
+							<div class="underGaugeValueBox left">
+								<div class="valueBox">
+									<div class="valueBox_inside">
+										<div class="valueTitle">
+											<b>좌 제동력</b>
+										</div>
+										<div class="valueContent">
+											<b>{{leftValue.mean}}</b>kg
+										</div>
+									</div>
+								</div>
+								<div class="valueBox">
+									<div class="valueBox_inside">
+										<div class="valueTitle">
+											<b>좌 복원력</b>
+										</div>
+										<div class="valueContent">
+											<b>{{leftValue.subValue}}</b>kg
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="centerContentPanel_child valuePanel">
+						<div style="padding-bottom: 155px;">
+							<div class="valueBoxOutside">
+								<div class="valueBox">
+									<div class="valueBox_inside">
+										<div class="valueTitle">
+											<b>축중</b>
+										</div>
+										<div class="valueContent">
+											<b>{{weightValue.mean}}</b>kg
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="valueBoxOutside">
+								<div class="valueBox">
+									<div class="valueBox_inside">
+										<div class="valueTitle">
+											<b>합</b>
+										</div>
+										<div class="valueContent">
+											<b>{{leftValue.subValue}}</b>%
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="valueBoxOutside">
+								<div class="valueBox">
+									<div class="valueBox_inside">
+										<div class="valueTitle">
+											<b>차</b>
+										</div>
+										<div class="valueContent">
+											<b>{{leftValue.subValue}}</b>%
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="valueBoxOutside" style="position: absolute; bottom: 213px;">
+								<div class="valueBox">
+									<div class="valueBox_inside">
+										<div class="valueTitle">
+											<b>pedal force</b>
+										</div>
+										<div class="valueContent">
+											<b>{{leftValue.release}}</b>%
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="centerContentPanel_child">
+						<div class="awdBrakeGaugePanel right">
+							<div class="awdBrakeGauge_outside">
+								<div class="awdBrakeGauge">
+									<dx-circular-gauge class="gauge" [value]="rightValue.mean" [subvalues]="rightValue.subValue">
+										<!--[value]="leftValue.mean" [subvalues]="leftValue.subValue"-->
+										<dxo-scale [startValue]="0" [endValue]="2500" [tickInterval]="1000">
+											<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+											<dxo-label [font]="{color:'#e7e6e6', size:'30px'}" [visible]="false"></dxo-label>
+										</dxo-scale>
+										<dxo-geometry [startAngle]="-132"
+													  [endAngle]="-48">
+										</dxo-geometry>
+										<dxo-range-container width="0" [offset]="-65">
+											<dxi-range [startValue]="0" [endValue]="500" color="#f44242"></dxi-range>
+											<dxi-range [startValue]="500" [endValue]="1000" color="#FFFF00"></dxi-range>
+											<dxi-range [startValue]="1000" [endValue]="1500" color="#4ff441"></dxi-range>
+											<dxi-range [startValue]="1500" [endValue]="2000" color="#FFFF00"></dxi-range>
+											<dxi-range [startValue]="2000" [endValue]="2500" color="#f44242"></dxi-range>
+										</dxo-range-container>
+										<dxo-value-indicator type="TriangleNeedle" color="#fa2626" secondColor="#FF0000" [baseValue]=0 width="30" spindleSize="30" offset="70">
+										</dxo-value-indicator>
+										<dxo-subvalue-indicator type="TriangleNeedle"
+																color="#8ba09d" width="15" offset="120"
+																spindleGapSize="20" spindleSize="15">
+										</dxo-subvalue-indicator>
+									</dx-circular-gauge>
+								</div>
+								<div class="awdBrakeCurrentValue">
+									<div class="axisValue currentValue">
+										<b>{{rightVal}}</b> kg
+									</div>
+								</div>
+							</div>
+
+							<div class="underGaugeValueBox right">
+								<div class="valueBox">
+									<div class="valueBox_inside">
+										<div class="valueTitle">
+											<b>우 제동력</b>
+										</div>
+										<div class="valueContent">
+											<b>{{rightValue.mean}}</b>kg
+										</div>
+									</div>
+								</div>
+								<div class="valueBox">
+									<div class="valueBox_inside">
+										<div class="valueTitle">
+											<b>우 복원력</b>
+										</div>
+										<div class="valueContent">
+											<b>{{rightValue.subValue}}</b>kg
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="centerContentPanel ovalityPanel">
+					<div class="ovalityPanel_1">
+						<div class="awdBrakeGaugePanel" style="position:relative; left: 100px; flex: 1;">
+							<div class="awdBrakeGauge_outside ovality">
+								<div class="awdBrakeGauge">
+									<dx-circular-gauge class="gauge" [value]="leftValue.mean" [subvalues]="leftValue.subValue">
+										<!--[value]="value.mean" [subvalues]="value.subValue"-->
+										<dxo-scale [startValue]="0" [endValue]="5000" [tickInterval]="1000">
+											<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+											<dxo-label [font]="{color:'#e7e6e6', size:'30px'}" [visible]="false"></dxo-label>
+										</dxo-scale>
+										<dxo-geometry [startAngle]="-132"
+													[endAngle]="-48">
+										</dxo-geometry>
+										<dxo-range-container width="0" [offset]="-65">
+											<dxi-range [startValue]="0" [endValue]="1000" color="#f44242"></dxi-range>
+											<dxi-range [startValue]="1000" [endValue]="2000" color="#FFFF00"></dxi-range>
+											<dxi-range [startValue]="2000" [endValue]="3000" color="#4ff441"></dxi-range>
+											<dxi-range [startValue]="3000" [endValue]="4000" color="#FFFF00"></dxi-range>
+											<dxi-range [startValue]="4000" [endValue]="5000" color="#f44242"></dxi-range>
+										</dxo-range-container>
+										<dxo-value-indicator type="TriangleNeedle" color="#fa2626" secondColor="#FF0000" [baseValue]=0 width="30" spindleSize="30" offset="70">
+										</dxo-value-indicator>
+										<dxo-subvalue-indicator type="TriangleNeedle"
+																color="#8ba09d" width="15" offset="120"
+																spindleGapSize="20" spindleSize="15">
+										</dxo-subvalue-indicator>
+
+									</dx-circular-gauge>
+								</div>
+								<div class="awdBrakeCurrentValue">
+									<div class="axisValue currentValue">
+										<b>{{leftValue.mean}}</b> mm
+									</div>
+								</div>
+							</div>
+						</div>
+						<div style="width: 150px; height: 100%;">
+							<div class="valueBoxOutside" style="position: relative; top: 650px; left: -100px;">
+								<div class="valueBox">
+									<div class="valueBox_inside">
+										<div class="valueTitle">
+											<b>pedal force</b>
+										</div>
+										<div class="valueContent">
+											<b>{{leftValue.release}}</b>kg
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div style="flex:1; background: 0;display: table;height: 100%;padding:0 113px;">
+							<div style="display: table-cell; vertical-align: middle; min-width: 700px;">
+								<dx-chart id="ovality_chart"
+										palette="violet"
+										color="#000"
+										[dataSource]="ovalitySource">
+									<dxi-series valueField="mean" name="제동력 합"></dxi-series>
+									<dxo-common-series-settings #seriesSettings
+																argumentField="second"
+																valueField="mean"
+																type="spline">
+										<dxo-point [visible]="false"></dxo-point>
+									</dxo-common-series-settings>
+
+									<dxo-argument-axis [allowDecimals]="false" [axisDivisionFactor]="50">
+										<dxo-grid [visible]="true"></dxo-grid>
+										<dxo-label>
+											<dxo-format type="decimal"></dxo-format>
+										</dxo-label>
+									</dxo-argument-axis>
+
+									<dxi-value-axis [allowDecimals]="false" [inverted]="false" [max]="5000" [min]="0">
+										<dxo-grid [visible]="true"></dxo-grid>
+										<dxo-label [customizeText]="customizeText"></dxo-label>
+									</dxi-value-axis>
+
+									<dxo-legend [visible]="false"></dxo-legend>
+									<dxo-export [enabled]="false"></dxo-export>
+									<dxo-tooltip [enabled]="false"></dxo-tooltip>
+								</dx-chart>
+							</div>
+
+						</div>
+					</div>
+					<div class="ovalityPanel_2">
+						<div style="flex:1; background: 0;display: table;height: 100%;padding:0 50px;">
+							<div style="display: table-cell; vertical-align: middle; min-width: 400px;">
+								<dx-chart id="ovality_chart_left"
+										palette="violet"
+										color="#000"
+										[dataSource]="ovalitySource">
+									<dxi-series valueField="mean" name="제동력 합"></dxi-series>
+									<dxo-common-series-settings #seriesSettings
+																argumentField="second"
+																valueField="mean"
+																type="spline">
+										<dxo-point [visible]="false"></dxo-point>
+									</dxo-common-series-settings>
+
+									<dxo-argument-axis [allowDecimals]="false" [axisDivisionFactor]="50">
+										<dxo-grid [visible]="true"></dxo-grid>
+										<dxo-label>
+											<dxo-format type="decimal"></dxo-format>
+										</dxo-label>
+									</dxo-argument-axis>
+
+									<dxi-value-axis [allowDecimals]="false" [inverted]="false" [max]="5000" [min]="0">
+										<dxo-grid [visible]="true"></dxo-grid>
+										<dxo-label [customizeText]="customizeText"></dxo-label>
+									</dxi-value-axis>
+
+									<dxo-legend [visible]="false"></dxo-legend>
+									<dxo-export [enabled]="false"></dxo-export>
+									<dxo-tooltip [enabled]="false"></dxo-tooltip>
+								</dx-chart>
+							</div>
+
+						</div>						
+						<div style="display: table; width: 300px; height: 100%;">
+								<div class="valueBoxOutside" style="display: table-cell; height: 100%; vertical-align: middle;">
+									<div class="valueBox" style="float: left;">
+										<div class="valueBox_inside">
+											<div class="valueTitle">
+												<b>좌측 휠</b>
+											</div>
+											<div class="valueContent">
+												<b>{{leftValue.release}}</b>kg
+											</div>
+										</div>
+									</div>
+									<div class="valueBox" style="float: left;">
+										<div class="valueBox_inside">
+											<div class="valueTitle">
+												<b>우측 휠</b>
+											</div>
+											<div class="valueContent">
+												<b>{{leftValue.release}}</b>kg
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						<div style="flex:1; background: 0;display: table;height: 100%;padding:0 50px;">
+							<div style="display: table-cell; vertical-align: middle; min-width: 400px;">
+								<dx-chart id="ovality_chart_right"
+										palette="violet"
+										color="#000"
+										[dataSource]="ovalitySource">
+									<dxi-series valueField="mean" name="제동력 합"></dxi-series>
+									<dxo-common-series-settings #seriesSettings
+																argumentField="second"
+																valueField="mean"
+																type="spline">
+										<dxo-point [visible]="false"></dxo-point>
+									</dxo-common-series-settings>
+
+									<dxo-argument-axis [allowDecimals]="false" [axisDivisionFactor]="50">
+										<dxo-grid [visible]="true"></dxo-grid>
+										<dxo-label>
+											<dxo-format type="decimal"></dxo-format>
+										</dxo-label>
+									</dxo-argument-axis>
+
+									<dxi-value-axis [allowDecimals]="false" [inverted]="false" [max]="5000" [min]="0">
+										<dxo-grid [visible]="true"></dxo-grid>
+										<dxo-label [customizeText]="customizeText"></dxo-label>
+									</dxi-value-axis>
+
+									<dxo-legend [visible]="false"></dxo-legend>
+									<dxo-export [enabled]="false"></dxo-export>
+									<dxo-tooltip [enabled]="false"></dxo-tooltip>
+								</dx-chart>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div>
+				<button class="btn red">정지</button>
+				<button class="btn">왼쪽 휠</button>
+				<button class="btn">오른쪽 휠</button>
+				<button class="btn green" name="ovality_check" (click)="show_ovalityTest()">변형도 검사</button>
+				<button class="btn green" name="ovality_check_close" style="display: none;" (click)="hide_ovalityTest()">변형도 검사 종료</button>
+				<button class="btn">DB</button>
+				<button class="btn">저장</button>
+				<button class="btn">ESC</button>
+			</div>
+		</div>
+	</div>
+</section>

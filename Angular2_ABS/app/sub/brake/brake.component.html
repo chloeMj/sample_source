@@ -1,0 +1,186 @@
+<!-- Main content -->
+<section class="contentSection">
+	<div class="contentBox">
+		<div class="topMsgBar">
+			<div class="width_20">
+				<div class="padding_right_10">
+					<div class="testName msgBox lineHeight_110">
+						<b>43바2938</b>
+					</div>
+				</div>
+			</div>
+			<div class="flex_1">
+				<div>
+					<div class="statusText msgBox lineHeight_110">
+						<b>{{statusText}}</b>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="centerContents_outside">
+			<div class="centerContents">
+				<div class="centerContentPanel">
+					<div class="gaugePanel left">
+						<div class="brakeGauge_outside">
+							<div class="brakeGauge">
+								<dx-circular-gauge class="gauge" [value]="leftValue.mean" [subvalues]="leftValue.subValue">
+									<dxo-scale [startValue]="0" [endValue]="2500" [tickInterval]="1000">
+										<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+										<dxo-label [font]="{color:'#e7e6e6', size:'30px'}" [visible]="false"></dxo-label>
+									</dxo-scale>
+									<dxo-geometry [startAngle]="-132"
+													[endAngle]="-48">
+									</dxo-geometry>
+									<dxo-range-container width="0" [offset]="-65">
+										<dxi-range [startValue]="0" [endValue]="500" color="#f44242"></dxi-range>
+										<dxi-range [startValue]="500" [endValue]="1000" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="1000" [endValue]="1500" color="#4ff441"></dxi-range>
+										<dxi-range [startValue]="1500" [endValue]="2000" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="2000" [endValue]="2500" color="#f44242"></dxi-range>
+									</dxo-range-container>
+									<dxo-value-indicator type="TriangleNeedle" color="#fa2626" secondColor="#FF0000" [baseValue]=0 width="30" spindleSize="30" offset="70">
+									</dxo-value-indicator>
+									<dxo-subvalue-indicator type="TriangleNeedle"
+															color="#8ba09d" width="15" offset="120"
+															spindleGapSize="20" spindleSize="15">
+									</dxo-subvalue-indicator>
+								</dx-circular-gauge>
+							</div>
+							<div class="brakeCurrentValue">
+								<div class="axisValue currentValue">
+									<b>{{leftVal}}</b>
+								</div>
+							</div>
+						</div>
+						<div class="underGaugeValueBox left">
+							<div class="valueBox">
+								<div class="valueBox_inside">
+									<div class="valueTitle">
+										<b>좌 제동력</b>
+									</div>
+									<div class="valueContent">
+										<b>{{leftValue.mean}}</b>kg
+									</div>
+								</div>
+							</div>
+							<div class="valueBox">
+								<div class="valueBox_inside">
+									<div class="valueTitle">
+										<b>좌 복원력</b>
+									</div>
+									<div class="valueContent">
+										<b>{{leftValue.subValue}}</b>kg
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="centerContentPanel valuePanel">
+					<div>
+						<div class="valueBoxOutside">
+							<div class="valueBox">
+								<div class="valueBox_inside">
+									<div class="valueTitle">
+										<b>축중</b>
+									</div>
+									<div class="valueContent">
+										<b>{{weightValue.mean}}</b>kg
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="valueBoxOutside">
+							<div class="valueBox">
+								<div class="valueBox_inside">
+									<div class="valueTitle">
+										<b>합</b>
+									</div>
+									<div class="valueContent">
+										<b>{{(((leftValue.mean+rightValue.mean) / weightValue.mean)*100).toFixed(1) > 1?(((leftValue.mean+rightValue.mean) / weightValue.mean)*100).toFixed(1):0}}</b>%
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="valueBoxOutside">
+							<div class="valueBox">
+								<div class="valueBox_inside">
+									<div class="valueTitle">
+										<b>차</b>
+									</div>
+									<div class="valueContent">
+										<b>{{((absData / weightValue.mean)*100).toFixed(1) > 1 ? ((absData / weightValue.mean)*100).toFixed(1):0}}</b>%
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="centerContentPanel">
+					<div class="gaugePanel right">
+						<div class="brakeGauge_outside">
+							<div class="brakeGauge">
+								<dx-circular-gauge class="gauge" [value]="rightValue.mean" [subvalues]="rightValue.subValue">
+									<!--[value]="leftValue.mean" [subvalues]="leftValue.subValue"-->
+									<dxo-scale [startValue]="0" [endValue]="2500" [tickInterval]="1000">
+										<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+										<dxo-label [font]="{color:'#e7e6e6', size:'30px'}" [visible]="false"></dxo-label>
+									</dxo-scale>
+									<dxo-geometry [startAngle]="-132"
+													[endAngle]="-48">
+									</dxo-geometry>
+									<dxo-range-container width="0" [offset]="-65">
+										<dxi-range [startValue]="0" [endValue]="500" color="#f44242"></dxi-range>
+										<dxi-range [startValue]="500" [endValue]="1000" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="1000" [endValue]="1500" color="#4ff441"></dxi-range>
+										<dxi-range [startValue]="1500" [endValue]="2000" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="2000" [endValue]="2500" color="#f44242"></dxi-range>
+									</dxo-range-container>
+									<dxo-value-indicator type="TriangleNeedle" color="#fa2626" secondColor="#FF0000" [baseValue]=0 width="30" spindleSize="30" offset="70">
+									</dxo-value-indicator>
+									<dxo-subvalue-indicator type="TriangleNeedle"
+															color="#8ba09d" width="15" offset="120"
+															spindleGapSize="20" spindleSize="15">
+									</dxo-subvalue-indicator>
+								</dx-circular-gauge>
+							</div>
+							<div class="brakeCurrentValue">
+								<div class="axisValue currentValue">
+									<b>{{rightVal}}</b>
+								</div>
+							</div>
+						</div>
+
+						<div class="underGaugeValueBox right">
+							<div class="valueBox">
+								<div class="valueBox_inside">
+									<div class="valueTitle">
+										<b>우 제동력</b>
+									</div>
+									<div class="valueContent">
+										<b>{{rightValue.mean}}</b>kg
+									</div>
+								</div>
+							</div>
+							<div class="valueBox">
+								<div class="valueBox_inside">
+									<div class="valueTitle">
+										<b>우 복원력</b>
+									</div>
+									<div class="valueContent">
+										<b>{{rightValue.subValue}}</b>kg
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<sub-footer></sub-footer>
+	</div>
+</section>
+
+
+
+

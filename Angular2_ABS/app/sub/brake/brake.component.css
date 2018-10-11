@@ -1,0 +1,147 @@
+.centerContents_outside {
+   
+}
+
+.centerContents {
+	display: flex;
+	height: 100%;
+}
+
+.centerContentPanel {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.gaugePanel {
+	width: 100%;
+	height: 100%;
+}
+	.gaugePanel.left {
+		position: relative;
+		right: -40px;
+	}
+	.gaugePanel.right {
+		position: relative;
+		left: -40px;
+	}
+
+.brakeGauge_outside {
+	display: table;
+	position: relative;
+	top: -50px;
+	width: 550px;
+	height: 550px;
+	margin: 0 auto;
+	background-size: auto 550px;
+	background-image: url(/assets/image/gauge_awdBrake.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.brakeGauge {
+	margin: 0 auto;
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding-bottom: 79px;
+}
+
+.gauge {
+	min-height: 600px;
+	width: 100%;
+	height: auto;
+}
+
+.brakeCurrentValue {
+	position: absolute;
+    top: 50%;
+    margin-top: 151px;
+    left: 50%;
+    margin-left: -103px;
+    width: 210px;
+}
+
+.currentValue {
+	color: #e7e6e6;
+    width: 203px;
+	text-align: right;
+}
+.valuePanel {
+	display: table;
+	height: 100%;
+}
+.valuePanel > div {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+}
+.valuePanel .valueBox {
+	margin: 10px 0;
+}
+
+.valueBoxOutside {
+	width: 300px;
+	margin: 0 auto;
+}
+.valueBox {
+	width: 100%;
+	line-height: 55px;
+	margin: 30px 0;
+	border-radius: 8px;
+	text-align: center;
+	border: 1px solid #1d252c;
+	box-sizing: border-box;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,1,0.20);
+}
+
+.valueBox .valueBox_inside {
+	display: flex;
+	flex-direction: column;
+	height: 120px;
+	font-size: 35px;
+}
+.valueBox_inside .valueTitle {
+	width: 100%;
+	text-align: center;
+	color: #dcdcdc;
+	background: #1d252c;
+	border: 1px solid #1d252c;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	box-sizing: border-box;
+}
+.valueBox_inside .valueContent {
+	width: 100%;
+	text-align: right;
+	color: #1d252c;
+	padding-right: 10px;
+	box-sizing: border-box;
+	
+	font-size: 45px;
+    line-height: unset;
+    padding-top: 1px;
+}
+.valueBox_inside .valueContent b {
+	font-size: 65px;
+}
+.underGaugeValueBox {
+	position: relative;
+	top: -140px;
+	display: flex;
+	width: 510px;
+	margin: 0 auto;
+	text-align: center;
+	/* margin-right: 125px; */
+}
+.underGaugeValueBox > .valueBox {
+	flex: 1;
+	width: 250px;
+	font-size: 45px;
+	margin-right: 10px;
+}
+.underGaugeValueBox > .valueBox:last-child{
+	margin-right: 0;
+}

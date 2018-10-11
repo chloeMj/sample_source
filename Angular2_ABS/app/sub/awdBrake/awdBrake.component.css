@@ -1,0 +1,223 @@
+.centerContents_outside {
+    min-height: 758px;
+}
+
+.centerContentPanel {
+	display: flex;
+	height: 100%;
+}
+	.centerContentPanel.awdPanel {
+	}
+	.centerContentPanel.ovalityPanel {
+		display: none;
+	}
+	.centerContentPanel.ovalityPanel > div {
+		width: 100%;
+		height: 100%;
+		flex: 1;
+		display: flex;
+	}
+	.centerContentPanel.ovalityPanel > div.ovalityPanel_1 {
+		display: none;
+	}
+	.centerContentPanel.ovalityPanel > div.ovalityPanel_2 {
+		
+	}
+.centerContentPanel_child {
+	flex: 1;
+	height: 100%;
+	box-sizing: border-box;
+}
+	.centerContentPanel_child.valuePanel {
+		flex: none;
+		width: 300px;
+		font-size: 40px;
+		display: table;
+	}
+		.centerContentPanel_child.valuePanel > div {
+			display: table-cell;
+			height: 100%;
+			vertical-align: middle;
+		}
+.awdBrakeGaugePanel {
+	height: 100%;
+}
+	.awdBrakeGaugePanel.left {
+		position: relative;
+		right: -20px;
+	}
+	.awdBrakeGaugePanel.right {
+		position: relative;
+		left: -20px;
+	}
+
+.awdBrakeGauge_outside {
+	display: table;
+	position: relative;
+	top: -50px;
+	width: 550px;
+	height: 550px;
+	margin: 0 auto;
+	background-size: auto 550px;
+	background-image: url(/assets/image/gauge_awdBrake.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.awdBrakeGauge_outside.ovality {
+	height: 100%;
+}
+
+.awdBrakeGauge {
+	margin: 0 auto;
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding-bottom: 76px;
+}
+
+.gauge {
+	min-height: 650px;
+	width: 100%;
+	height: auto;
+}
+.awdBrakeCurrentValue {
+	position: absolute;
+    top: 50%;
+    margin-top: 155px;
+    left: 50%;
+    margin-left: -101px;
+    width: 210px;
+}
+
+.currentValue {
+	color: #e7e6e6;
+	font-size: 31pt;
+    width: 203px;
+	text-align: right;
+}
+
+.valuePanel .valueBox {
+	margin: 10px 0;
+}
+
+.valueBoxOutside {
+	width: 300px;
+	margin: 0 auto;
+}
+.valueBox {
+	width: 100%;
+	line-height: 55px;
+	margin: 30px 0;
+	border-radius: 8px;
+	text-align: center;
+	border: 1px solid #1d252c;
+	box-sizing: border-box;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,1,0.20);
+}
+	.valueBox .valueBox_inside {
+		display: flex;
+		flex-direction: column;
+		height: 120px;
+		font-size: 35px;
+	}
+	.valueBox_inside .valueTitle {
+		width: 100%;
+		text-align: center;
+		color: #dcdcdc;
+		background: #1d252c;
+		border: 1px solid #1d252c;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		box-sizing: border-box;
+	}
+	.valueBox_inside .valueContent {
+		width: 100%;
+		text-align: right;
+		color: #1d252c;
+		padding-right: 10px;
+		box-sizing: border-box;
+	}
+.underGaugeValueBox {
+	position: relative;
+	top: -150px;
+	width: 510px;
+	margin: 0 auto;
+	text-align: center;
+	/* margin-right: 125px; */
+}
+	.underGaugeValueBox > .valueBox {
+		float: left;
+		width: 250px;
+		font-size: 45px;
+		margin-right: 10px;
+	}
+	.underGaugeValueBox > .valueBox:last-child{
+		margin-right: 0;
+	}
+
+.ovalityChartPanel {
+	flex: 1;
+	background: 0;
+	display: table;
+	height: 100%;
+	padding: 0 113px;
+}
+
+.footer {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 95px;
+	margin-bottom: 10px;
+}
+
+	.footer > div {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		padding: 10px;
+		border-radius: 8px;
+		border: 2px solid #1d252c;
+		background: #1d252c;
+		box-sizing: border-box;
+	}
+
+		.footer > div > button.btn {
+			min-width: 120px;
+			margin-right: 10px;
+			font-size: 2rem;
+			font-weight: bold;
+			padding: 0.3em 0.4em;
+			box-shadow: none;
+			border-color: #0f1317;
+		}
+		.footer > div > button.btn:last-child {
+			margin-right: 0;
+		}
+			.footer > div > button.btn.red {
+				background: red;
+				background-image: -webkit-gradient(linear, left top, left bottom, from(#ff482d), to(#de1d00));
+				background-image: -webkit-linear-gradient(top, #ff482d, #de1d00);
+				background-image: -moz-linear-gradient(top, #ff482d, #de1d00);
+				background-image: -ms-linear-gradient(top, #ff482d, #de1d00);
+				background-image: -o-linear-gradient(top, #ff482d, #de1d00);
+				background-image: linear-gradient(to bottom, #ff482d, #de1d00);
+			}
+			.footer > div > button.btn.green {
+				background-image: -webkit-gradient(linear, left top, left bottom, from(#6dff2d), to(#018600));
+				background-image: -webkit-linear-gradient(top, #6dff2d, #018600);
+				background-image: -moz-linear-gradient(top, #6dff2d, #018600);
+				background-image: -ms-linear-gradient(top, #6dff2d, #018600);
+				background-image: -o-linear-gradient(top, #6dff2d, #018600);
+				background-image: linear-gradient(to bottom, #6dff2d, #018600);
+			}
+#ovality_chart, #ovality_chart_left, #ovality_chart_right {
+	min-width: 500px;
+	height: 440px;
+	width: 590px;
+	/*background: #FFFFE8;*/
+}

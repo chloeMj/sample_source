@@ -1,0 +1,403 @@
+<!-- Main content -->
+<section class="contentPanel">
+	<div class="centerPanel">
+		<div class="panel">
+			<div class="testTitle">
+				사이드 슬립
+			</div>
+			<div class="inputPanel">
+				<div class="row">
+					<div class="subTitle">
+							<img class="compTitleImg" src="/assets/image/bar_vertical_1.png">전륜
+					</div>
+					<div class="componentPanel">
+						<div class="component">
+							<div>
+								<div class="componentLabel">IN</div>
+								<div class="componentEl">
+									<input type="number" placeholder="mm/m" [value]="config.sideSlip_front_in" (input)="config.sideSlip_front_in = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+						<div class="component">
+							<div>
+								<div class="componentLabel">OUT</div>
+								<div class="componentEl">
+									<input type="number" placeholder="mm/m" [value]="config.sideSlip_front_out" (input)="config.sideSlip_front_out = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="subTitle">
+							<img class="compTitleImg" src="/assets/image/bar_vertical_1.png">후륜
+					</div>
+					<div class="componentPanel">
+						<div class="component">
+							<div>
+								<div class="componentLabel">IN</div>
+								<div class="componentEl">
+									<input type="number" placeholder="mm/m" [value]="config.sideSlip_end_in" (input)="config.sideSlip_end_in = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+						<div class="component">
+							<div>
+								<div class="componentLabel">OUT</div>
+								<div class="componentEl">
+									<input type="number" placeholder="mm/m" [value]="config.sideSlip_end_out" (input)="config.sideSlip_end_out = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel">
+			<div class="testTitle">
+				브레이크
+			</div>
+			<div class="inputPanel">
+				<div class="row">
+					<div class="subTitle">
+							<img class="compTitleImg" src="/assets/image/bar_vertical_1.png">전륜
+					</div>
+					<div class="componentPanel">
+						<div class="component">
+							<div>
+								<div class="componentLabel">편차</div>
+								<div class="componentEl">
+									<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_front_deviation" (input)="config.brake_front_deviation = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+						<div class="component">
+							<div>
+								<div class="componentLabel">합계</div>
+								<div class="componentEl">
+									<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_front_sum" (input)="config.brake_front_sum = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+						<div class="component">
+							<div>
+								<div class="componentLabel">복원력</div>
+								<div class="componentEl">
+									<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_front_restore" (input)="config.brake_front_restore = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="subTitle">
+							<img class="compTitleImg" src="/assets/image/bar_vertical_1.png">후륜
+					</div>
+					<div class="componentPanel">
+						<div class="component">
+							<div>
+								<div class="componentLabel">편차</div>
+								<div class="componentEl">
+									<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_end_deviation" (input)="config.brake_end_deviation = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+						<div class="component">
+							<div>
+								<div class="componentLabel">합계</div>
+								<div class="componentEl">
+									<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_end_sum" (input)="config.brake_end_sum = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+						<div class="component">
+							<div>
+								<div class="componentLabel">복원력</div>
+								<div class="componentEl">
+									<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_end_restore" (input)="config.brake_end_restore = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="inputPanel">
+				<div class="row">
+					<div class="componentPanel">
+						<div class="component">
+							<div>
+								<div class="componentLabel">합계 제동력</div>
+								<div class="componentEl margin_right_3">
+									<input type="number" placeholder="공차중량의 % 이상" [value]="config.brake_sum" (input)="config.brake_sum = $event.target.value;" />
+								</div>
+								<div class="componentLabel">주차제동력</div>
+								<div class="componentEl">
+									<input type="number" placeholder="공차중량의 % 이상" [value]="config.brake_parking" (input)="config.brake_parking = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel">
+			<div class="testTitle">
+				속도계
+			</div>
+			<div class="inputPanel">
+				<div class="row">
+					<div class="subTitle">
+							<img class="compTitleImg" src="/assets/image/bar_vertical_1.png">40km
+					</div>
+					<div class="componentPanel">
+						<div class="component">
+							<div>
+								<div class="componentLabel">하한</div>
+								<div class="componentEl">
+									<input type="number" placeholder="km/h" [value]="config.speed_40_low" (input)="config.speed_40_low = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+						<div class="component">
+							<div>
+								<div class="componentLabel">상한</div>
+								<div class="componentEl">
+									<input type="number" placeholder="km/h" [value]="config.speed_40_high" (input)="config.speed_40_high = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="subTitle">
+							<img class="compTitleImg" src="/assets/image/bar_vertical_1.png">60km
+					</div>
+					<div class="componentPanel">
+						<div class="component">
+							<div>
+								<div class="componentLabel">하한</div>
+								<div class="componentEl">
+									<input type="number" placeholder="km/h" [value]="config.speed_60_low" (input)="config.speed_60_low = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+						<div class="component">
+							<div>
+								<div class="componentLabel">상한</div>
+								<div class="componentEl">
+									<input type="number" placeholder="km/h" [value]="config.speed_60_high" (input)="config.speed_60_high = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel">
+			<div class="testTitle">
+				택시
+			</div>
+			<div class="inputPanel">
+				<div class="row">
+					<div class="subTitle">
+							<img class="compTitleImg" src="/assets/image/bar_vertical_1.png">1종
+					</div>
+					<div class="componentPanel">
+						<div class="component">
+							<div>
+								<div class="componentLabel">기본거리</div>
+								<div class="componentEl">
+									<input type="number" placeholder="미터" [value]="config.taxi_type1_base" (input)="config.taxi_type1_base = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+						<div class="component">
+							<div>
+								<div class="componentLabel">이후거리</div>
+								<div class="componentEl">
+									<input type="number" placeholder="미터" [value]="config.taxi_type1_after" (input)="config.taxi_type1_after = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="subTitle">
+							<img class="compTitleImg" src="/assets/image/bar_vertical_1.png">2종
+					</div>
+					<div class="componentPanel">
+						<div class="component">
+							<div>
+								<div class="componentLabel">기본거리</div>
+								<div class="componentEl">
+									<input type="number" placeholder="미터" [value]="config.taxi_type2_base" (input)="config.taxi_type2_base = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+						<div class="component">
+							<div>
+								<div class="componentLabel">이후거리</div>
+								<div class="componentEl">
+									<input type="number" placeholder="미터" [value]="config.taxi_type2_after" (input)="config.taxi_type2_after = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="subTitle">
+							<img class="compTitleImg" src="/assets/image/bar_vertical_1.png">3종
+					</div>
+					<div class="componentPanel">
+						<div class="component">
+							<div>
+								<div class="componentLabel">기본거리</div>
+								<div class="componentEl">
+									<input type="number" placeholder="미터" [value]="config.taxi_type3_base" (input)="config.taxi_type3_base = $event.target.value;" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--
+	<div class="row">
+		<div class="col-12">
+			<h3><b>제동력</b></h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-2 offset-1">
+			<h5><b>전륜</b></h5>
+		</div>
+		<div class="col-2">
+			<label>편차</label>
+			<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_front_deviation" (input)="config.brake_front_deviation = $event.target.value;" />
+		</div>
+		<div class="col-2">
+			<label>합계</label>
+			<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_front_sum" (input)="config.brake_front_sum = $event.target.value;" />
+		</div>
+		<div class="col-2">
+			<label>복원력</label>
+			<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_front_restore" (input)="config.brake_front_restore = $event.target.value;" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-2 offset-1">
+			<h5><b>후륜</b></h5>
+		</div>
+		<div class="col-2">
+			<label>편차</label>
+			<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_end_deviation" (input)="config.brake_end_deviation = $event.target.value;" />
+		</div>
+		<div class="col-2">
+			<label>합계</label>
+			<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_end_sum" (input)="config.brake_end_sum = $event.target.value;" />
+		</div>
+		<div class="col-2">
+			<label>복원력</label>
+			<input type="number" placeholder="당해 축중의 %이내" [value]="config.brake_end_restore" (input)="config.brake_end_restore = $event.target.value;" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-2 offset-3">
+			<label>합계 제동력</label>
+			<input type="number" placeholder="공차중량의 % 이상" [value]="config.brake_sum" (input)="config.brake_sum = $event.target.value;" />
+		</div>
+		<div class="col-2">
+			<label>주차제동력</label>
+			<input type="number" placeholder="공차중량의 % 이상" [value]="config.brake_parking" (input)="config.brake_parking = $event.target.value;" />
+		</div>
+	</div>
+	<div class="row" style="clear:both;">
+		<div class="col-12">
+			<h3><b>속도계</b></h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-2 offset-1">
+			<h5><b>40km</b></h5>
+		</div>
+		<div class="col-2">
+			<label>하한</label>
+			<input type="number" placeholder="km/h" [value]="config.speed_40_low" (input)="config.speed_40_low = $event.target.value;" />
+		</div>
+		<div class="col-2">
+			<label>상한</label>
+			<input type="number" placeholder="km/h" [value]="config.speed_40_high" (input)="config.speed_40_high = $event.target.value;" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-2 offset-1">
+			<h5><b>60km</b></h5>
+		</div>
+		<div class="col-2">
+			<label>하한</label>
+			<input type="number" placeholder="km/h" [value]="config.speed_60_low" (input)="config.speed_60_low = $event.target.value;" />
+		</div>
+		<div class="col-2">
+			<label>상한</label>
+			<input type="number" placeholder="km/h" [value]="config.speed_60_high" (input)="config.speed_60_high = $event.target.value;" />
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12">
+			<h3><b>택시</b></h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-2 offset-1">
+			<h5><b>1종</b></h5>
+		</div>
+		<div class="col-2">
+			<label>기본거리</label>
+			<input type="number" placeholder="미터" [value]="config.taxi_type1_base" (input)="config.taxi_type1_base = $event.target.value;" />
+		</div>
+		<div class="col-2">
+			<label>이후거리</label>
+			<input type="number" placeholder="미터" [value]="config.taxi_type1_after" (input)="config.taxi_type1_after = $event.target.value;" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-2 offset-1">
+			<h5><b>2종</b></h5>
+		</div>
+		<div class="col-2">
+			<label>기본거리</label>
+			<input type="number" placeholder="미터" [value]="config.taxi_type2_base" (input)="config.taxi_type2_base = $event.target.value;" />
+		</div>
+		<div class="col-2">
+			<label>이후거리</label>
+			<input type="number" placeholder="미터" [value]="config.taxi_type2_after" (input)="config.taxi_type2_after = $event.target.value;" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-2 offset-1">
+			<h5><b>3종</b></h5>
+		</div>
+		<div class="col-2">
+			<label>기본거리</label>
+			<input type="number" placeholder="미터" [value]="config.taxi_type3_base" (input)="config.taxi_type3_base = $event.target.value;" />
+		</div>
+	</div>
+
+		-->
+	</div>
+	<div class="bottomPanel">
+			<div class="btns">
+				<button class="btn" type="button" (click)="setupReferenceCOnfig()"><fa name="save"></fa>&nbsp;저장</button>
+			</div>
+	</div>
+</section>
+<!-- /.content -->
+
+
+
+

@@ -1,0 +1,619 @@
+div.navbar {
+	height: 100px;
+}
+	div.navbar > div.navTitle {
+		float: left;
+		margin-top: 20px;
+		margin-left: 15px;
+	}
+
+
+	div.navbar > div.navTitle div.mainLogo {
+		margin-top: 9px;
+		float: left;
+		height: 51px;
+		width: 332px;
+		background-image: url(/assets/image/qro_logo.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	div.navbar > div.navTitle div.systemName {
+		vertical-align: bottom;
+		float: left;
+		line-height: 64px;
+		font-size: 63px;
+		font-weight: bolder;
+	}
+		div.navbar > div.navTitle div.versionInfo {
+			float: left;
+			position: relative;
+			top: 31px;
+			left: 21px;
+			font-size: 25px;
+			font-weight: bold;
+		}
+
+	div.navbar > div.menus {
+		position: absolute;
+		right: 100px;
+		top: 65px;
+	}
+		div.navbar > div.menus > div.autoMode {
+			position: relative;
+			top: 13px;
+			background: #ff3d0c;
+			color: #fff;
+			border-radius: 20px;
+			font-size: 15px;
+		}
+		div.navbar > div.menus > div.autoMode > span {
+			font-weight: bold;
+		}
+
+		div.navbar > div.menus > * {
+			float: left;
+			font-size: 20px;
+			padding: 5px 15px;
+			margin-right: 10px;
+		}
+
+			div.navbar > div.menus > *:last-child {
+				margin-right: 0;
+			}
+
+.btn:hover{
+	/* color: #ff3d0c; */
+}
+div.centerContents_outside {
+	margin-bottom: 50px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.40), 0 3px 6px rgba(0,0,1,0.40);
+}
+
+div.centerContents {
+	display: flex;
+	background: #f8f8f8;
+	border-radius: 8px;
+}
+
+div.centerContentPanel {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+	div.centerContentPanel:first-child {
+		margin: 10px 0 10px 10px;
+	}
+
+	div.centerContentPanel.carListPanel {
+		flex: 1;
+		display: block;
+	}
+
+div.panelTitle {
+	color: #1d252c;
+	height: 55px;
+	line-height: 70px;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 5px;
+}
+div.panelTitle::before {
+	content: ' ';
+}
+
+div.panelTitle img.panelTitleImg {
+	float: left;
+    height: 55px;
+    position: relative;
+    top: 7px;
+    margin: 0 5px;
+}
+
+div.centerContents div.compPanel {
+	flex: 1;
+	height: 100%;
+}
+
+	div.centerContents div.compPanel > div {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		border-radius: 8px;
+	}
+
+div.compPanel div.compContentPanel {
+	flex: 1;
+	overflow-y: auto;
+	border: 2px solid #31485d;
+	background: #fff;
+	border-radius: 8px;
+	box-sizing: border-box;
+	
+}
+
+div.carList table {
+	width: 100%;
+	/* background-color: #f5f5f5; */
+	border-collapse: collapse;
+	text-align: center;
+}
+div.carList table td, div.carList table th {
+	border-right: 1px solid #dee1e3;
+}
+div.carList table td:last-child, div.carList table th:last-child {
+	border-right: 0;
+}
+	div.carList table thead tr {
+		border-bottom: 2px solid #dee1e3;	
+		background: rgba(49, 49, 49, 0.1);
+		color: #333;
+	}
+	div.carList table tbody tr {
+		border-bottom: 1px solid #dee1e3;
+	}
+	div.carList table tbody tr:last-child {
+		border-bottom: 3px double #dee1e3;
+	}
+	div.carList table tbody tr:nth-of-type(2n) {
+		background-color: #fafafa;
+		/* background-color: rgba(255,255,255,.4); */
+	}
+	div.carList table tbody tr.hoverRow {
+		background: #faebe8;
+	}
+	div.carList table tbody tr.selected {
+		background: #ff6038; /* #ff3d0c; */
+		color: #fff;
+	}
+
+	div .carList table th {
+		font-weight: 600;
+		line-height: 30px;
+		font-size: 22px;
+		padding: 1px 7px;
+		/* color: #8899a8; */
+		/*
+		color: #dcdcdc;
+		background: #1d252c; 
+		*/
+	}
+
+	div.carList table tbody td {
+		font-size: 20px;
+		line-height: 30px;
+		padding: 1px 7px;
+	}
+
+div.testPanel {
+	display:flex;
+	flex-direction: column;
+}
+div.testPanel > div:first-child {
+	flex: 1;
+}
+div.testPanel div.inputValForm {
+	border: 2px ridge #ddd;
+	margin: 20px;
+	padding: 15px;
+	background: #fff;
+	height: 190px;
+}
+
+div.comp {
+	font-size: 25px;
+	clear: both;
+	padding-top: 10px;
+}
+div.comp:first-child {
+	/* padding-top: 0; */
+}
+
+	div.comp div.compTitle {
+		font-weight: bold;
+		line-height: 40px;
+		/*
+		background: #1d252c;
+		color: #dcdcdc;
+		*/
+	}
+	div.comp div.compTitle img.compTitleImg {
+		margin: 0 5px;
+		margin-bottom: 4px;
+		width: 9px;
+	}
+
+	div.comp div.compInput {
+		/*display: inline-block;*/
+		clear: both;
+		font-size: 22px;
+	}
+
+		div.comp div.compInput input[type="radio"] {
+			font-size: 20px;
+		}
+
+		div.comp div.compInput > * {
+			float: left;
+			width: 100px;
+		}
+		div.comp div.compInput *:hover {
+			cursor: pointer;
+		}
+
+div.selectAxisComp {
+	text-align: center;
+	font-weight: 400;
+}
+	div.selectAxisComp > div {
+		line-height: 35px;
+		background: #adadad;
+		color: #848484;
+	}
+	div.selectAxisComp > div:first-child {
+		border-right: 1px solid #ddd;
+	}
+
+div.manualAxisItems {
+	/* display: none;
+	padding-top:5px;
+	padding-left: 20px; */
+}
+
+div.testPanel div.inputVal {
+	width: 80%;
+	line-height: 40px;
+	margin: 10px auto;
+	padding: 10px;
+	font-size: 1.5em;
+	background: #fff;
+	border-radius: 8px;
+	border: 1px solid #1d252c;
+	box-shadow: inset 2px 2px 7px rgba(0,0,0,0.40);
+}
+
+div.inputVal div {
+	font-weight: normal;
+	margin-right: 5px;
+}
+
+	div.inputVal div.component {
+		display: inline-block;
+		margin: 10px;
+	}
+
+div.inputVal .label {
+	/*width: 7em;*/
+}
+
+	div.inputVal .label.inputLabel {
+		font-weight: bold;
+	}
+
+div.inputVal .inputValCompGroup {
+	padding-left: 2em;
+}
+
+div.inputVal .inputValComp {
+	width: 5em;
+}
+
+input[type="radio"] {
+	width: 1em;
+	height: 1em;
+	vertical-align: sub;
+}
+
+
+	.selected {
+		background: #ff6038; /* #ff3d0c; */
+		color: #fff;
+	}
+	
+
+button.bigBtn {
+	padding: 2px 25px;
+    margin-right: 10px;
+    font-size: 25px;
+    line-height: 2em;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+	button.bigBtn:last-child {
+		margin-right: 0;
+	}
+
+.margin_bottom_10 {
+	margin-bottom: 10px;
+}
+
+.margin_10 {
+	margin: 10px;
+}
+
+.checkBtnActive {
+	/*
+	border: 2px solid;
+	color: #082149;
+	font-weight: bold;
+	margin-right: 1px;
+	*/
+}
+
+div.bottomBtns {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: 10px;
+	height: 55px;
+}
+
+div.buttons button {
+	/* margin-top: 10px; */
+	margin-right: 10px;
+	padding: 0px 20px;
+	font-size: 20px;
+	padding: 5px 13px;
+}
+
+.alignCenter {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+/***********************pop up********************************/
+
+.popupBox {
+	display: none;
+	position: fixed;
+	_position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+
+	.popupBox .popupBg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		opacity: .3;
+		filter: alpha(opacity=50);
+	}
+
+	div.popLayer {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		max-height: 895px;
+		color: #dcdcdc;
+		background-color: #fff;
+		border: 2px solid #1d252c;
+		z-index: 10;
+		box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12), 0px 1px 5px 0px rgba(0,0,0,0.2);
+	}
+
+		div.popLayer .popupWrap {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			color: black;
+		}
+	
+.popupTitle {
+	background: #1d252c;
+	line-height: 30px;
+	padding-left: 10px;
+	vertical-align: middle;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.popupFooter {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #fff;
+	background: #1d252c;
+}
+
+.popupBox .btn-r {
+	width: 100%;
+	margin: 0;
+	padding-top: 5px;
+	border-top: 1px solid #DDD;
+	text-align: right;
+}
+
+.popupBox .popupTitle {
+	color: #dcdcdc;
+	font-weight: bold;
+}
+
+	.popupBox .popupTitle a.closeBtn {
+		text-decoration: none;
+		display: inline-block;
+		height: auto;
+		font-size: 23px;
+		color: #dcdcdc;
+		border: 0;
+		background: 0;
+	}
+
+		.popupBox .popupTitle a.closeBtn:hover {
+			text-decoration: none;
+			color: #555;
+			background: #dcdcdc;
+		}
+
+	.popupBox .popupTitle .btn-r {
+		width: 100%;
+		margin: 0;
+		padding-top: 0;
+		border-top: 0;
+		text-align: right;
+	}
+
+a.closeBtn {
+	text-decoration: none;
+	display: inline-block;
+	height: 25px;
+	padding: 0 14px 0;
+	border: 1px solid #304a8a;
+	background-color: #3f5a9d;
+	font-size: 13px;
+	color: #fff;
+	line-height: 25px;
+}
+
+	a.closeBtn:hover {
+		border: 1px solid #091940;
+		background-color: #1f326a;
+		color: #fff;
+	}
+
+/*******************************************************/
+/* Style the tab */
+div.tabPanel {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tabTitles {
+	/*
+	padding-top: 5px;
+	padding-left: 5px;
+	*/
+	background: #e5e5e5;
+}
+
+div.tab_title {
+	background-color: inherit;
+	float: left;
+	/*border: 1px solid #ccc;*/
+	border-bottom: 0;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	transition: .2s;
+	outline: none;
+	cursor: pointer;
+	padding: 5px 16px;
+	transition: 0.3s;
+}
+
+	div.tab_title.active {
+		background: #fff;
+	}
+
+	div.tab_title.disabled {
+		background: #aaaaaa;
+		color: #7f7f7f;
+		border-bottom: 1px solid #ccc;
+	}
+
+	/* Change background color of buttons on hover */
+	div.tab_title:hover {
+		background-color: #ddd;
+	}
+
+	/* Create an active/current tablink class */
+	div.tab_title:active {
+		background-color: #ccc;
+	}
+
+/* Style the tab content */
+.tabContents {
+	clear: both;
+	flex: 1;
+	/*
+	border-top: 1px solid #ccc;
+	outline-offset: -1px;
+	*/
+}
+
+	.tabContents > div.tab {
+		display: none;
+		height: 100%;
+		/*
+		border: 1px solid #ccc;
+		border-top: none;
+		*/
+	}
+
+		.tabContents > div.tab:first-child {
+			display: block;
+		}
+
+		.tabContents > div.tab > div {
+			height: 100%;
+		}
+/*******************************************************/
+div.popupContents {
+	flex: 1;
+	overflow-y: auto;
+}
+div.popupBoxChild {
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+
+}
+
+div.selectedCarInfo {
+	margin-top: 20px;
+	font-size: 25px;
+	text-align: center;
+}
+div.selectedCarInfo > span[name=selectedCarNum] {
+	font-weight: bold;
+}
+
+div.indiContent {	
+	font-size: 23px;
+	font-weight: 600;
+	text-align: center;
+	margin: 20px 10px;
+	padding: 15px;
+	border: 2px ridge #ddd;
+}
+div.indiContent > span {
+	margin-right: 30px;
+}
+div.indiContent > span:last-child {
+	margin-right: 0;
+}
+
+#indiPopContent button.btn {
+	font-size: 25px;
+	padding: 5px 15px;
+	margin:5px;
+}

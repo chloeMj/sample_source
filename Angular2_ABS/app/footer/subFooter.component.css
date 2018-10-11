@@ -1,0 +1,235 @@
+.subFooter {
+	width: 100%;
+	height: 100%;
+}
+
+.subFooterBg {
+	display: flex;
+	height: 100%;
+	border-radius: 8px;
+	border: 2px solid #1d252c;
+	background: #1d252c;
+}
+
+div.subFooterBg > div {
+	margin: 0 10px;
+	height: 100%;
+}
+	div.subFooterBg > div:last-child {
+		margin: 0;
+	}
+
+.testStatus {
+	width: 23%;
+	min-width: 410px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.carType {
+	display: inline-block;
+	height: 50%;
+	line-height: 75px;
+	text-align: center;
+	font-size: 3rem;
+	font-weight: bolder;
+	/*color: #dcdcdc;*/
+	color: #dcdcdc;
+	/*overflow: hidden;*/
+	white-space: nowrap;
+}
+
+.buttons {
+	width: 100%;
+	height: 50%;
+	line-height: 75px;
+	vertical-align: middle;
+}
+
+.buttonsBox {
+	text-align: center;
+}
+
+	.buttonsBox .btn {
+		display: inline;
+		margin-right: 10px;
+		font-size: 2rem;
+		padding: 0.3em 0.4em;
+		/* box-shadow: none;
+		border-color: #0f1317; */
+		border-color: #b3b3b3;
+		box-shadow: 0 2px 0 #0f1317;
+	}
+	.buttonsBox .btn:last-child {
+		margin-right: 0;
+	}
+
+div.testProgress {
+	flex: 1;
+	height: 100%;
+	/*min-width: 1130px;*/
+}
+div.testProgressTable {
+	padding: 10px 10px 10px 0;
+	height: 100%;
+	display: inherit;
+	box-sizing: border-box;
+}
+
+div.testProgressTBody {
+	height: 100%;
+	background: white;
+	/*border-radius: 8px;*/
+	color: black;
+	border: 1px solid #1d252c;
+	box-sizing: border-box;
+	border-radius: 8px;
+}
+
+div.testProgressTRow {
+	clear: both;
+	height: 50%;
+	box-sizing: border-box;
+}
+div.testPregressHeaderRow {
+	color: #1d252c;
+}
+
+	div.testProgressTRow:first-child {
+		background: linear-gradient(to bottom,#eaeaea 0,#cccccc 100%);
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+	div.testProgressTRow .header-cell {
+		/*background: #eaeaea;*/
+		font-weight: bold;
+		font-size: 45px;
+	}
+	div.testProgressTRow .progressHeader {
+		display: block;
+		position: relative;
+		min-width: 90px;
+		height: 7px;
+		top: -52px;
+		background-color: blue;
+		display: none;
+	}
+		div.testProgressTRow .progressHeader.sideSlip{
+			background: red;
+		}
+		div.testProgressTRow .progressHeader.brake {
+			background: green;
+		}
+		div.testProgressTRow .progressHeader.speed {
+			background: yellow;
+		}
+		div.testProgressTRow .progressHeader.total {
+			background: orange;
+		}
+
+div.cell div.progressHeader.processing, div.cell div.progressHeader.processed {
+	display: block;
+}
+
+div.cell div.progressHeader.resultHide {
+	display: none;
+}
+
+	div.testProgressTRow > div.cell {
+		float: left;
+		width: 10%;
+		min-width: 90px;
+		height: 100%;
+		box-sizing: border-box;
+		border-right: 1px solid #1d252c;
+		border-bottom: 1px solid #1d252c;
+		text-align: center;
+	}
+
+div.cell:first-child .progressHeader {
+	border-top-left-radius: 6px;
+}
+
+div.cell:last-child .progressHeader {
+	border-top-right-radius: 6px;
+}
+
+		div.testProgressTRow > div.cell:last-child {
+			border-right: 0;
+		}
+	div.testProgressTRow:last-child > div.cell {
+		border-bottom: 0;
+	}
+
+	div.testProgressTRow .last_cell {
+		border-right: 0;
+	}
+
+	div.testProgressTRow .circle {
+		width: 100%;
+		height: 100%;
+		background-image: url('/assets/image/circle_green.png'); /*  circle_green or circle  */
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	div.testProgressTRow .times {
+		width: 100%;
+		height: 100%;
+		background-image: url('/assets/image/times.png');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+
+.subFooterFlex {
+	display: flex;
+	left: 0px;
+	bottom: 0px;
+}
+
+.defaultTextColor {
+	color: #e7e6e6;
+}
+
+.display_table {
+	display: table;
+}
+
+.display_contents {
+	display: contents;
+}
+
+.display_flex {
+	display: flex;
+}
+
+.passedCell {
+	padding: 5px;
+}
+
+.passed {
+	border: 5px solid #dcdcdc;
+	/* background: #1d252c; */
+	border-radius: 50%;
+}
+
+.content-bottom {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	height: 15%;
+	width: 100%;
+	background: #d0e4f7; /* Old browsers */
+	background: -moz-linear-gradient(top, #d0e4f7 0%, #73b1e7 24%, #0a77d5 61%, #539fe1 79%, #87bcea 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #d0e4f7 0%,#73b1e7 24%,#0a77d5 61%,#539fe1 79%,#87bcea 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #d0e4f7 0%,#73b1e7 24%,#0a77d5 61%,#539fe1 79%,#87bcea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', endColorstr='#87bcea',GradientType=0 ); /* IE6-9 */
+	box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+	color: white;
+	font-size: 1.5em;
+}
+
+tbody.tableBlack > tr > td {
+	background-color: #1E1E1E;
+}

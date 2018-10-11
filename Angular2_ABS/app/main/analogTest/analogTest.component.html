@@ -1,0 +1,30 @@
+<!-- Main content -->
+<div class="analogTestPanel">
+	<div>
+		<div name="input" class="ioPanel left">
+			<!--입력-->
+			<div>
+				<div *ngFor="let inputTitle of inputTitles; let i = index" class="analogValBox">
+					<div class="analogVal">
+						<div class="inputVal" [ngClass]="{'ledOn':input[i] === '1','ledOff':input[i] === '0'}">{{inputTitle}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div name="output" class="ioPanel right">
+			<!--출력-->
+			<div>
+				<div *ngFor="let outputTitle of outputTitles; let i = index" class="analogValBox">
+					<div class="analogVal">
+						<button type="button" class="btn btn-lg" [ngClass]="{'ledOn':output[i] === '1','ledOff':output[i] === '0'}" (click)="outputGo(i)">{{outputTitle}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.content -->
+
+
+
+

@@ -1,0 +1,156 @@
+<!-- Main content -->
+<section class="contentSection">
+	<header class="degree-header">
+		<degree-header></degree-header>
+	</header>
+	<div class="contentBox">
+		<div class="centerContents_outside">
+			<div class="centerContents">
+				<div class="gaugePanel">
+					<div class="gaugeTitle">
+						축중
+					</div>
+					<div class="lineGaugePanel">
+						<div class="lineGaugeBg weight">
+							<div class="lineGaugeComp">
+								<dx-linear-gauge id="weightLineGauge" class="lineGauge" [value]="weightValue.mean" [subvalues]="weightValue.subValue">
+									<dxo-range-container width="0"></dxo-range-container>
+									<dxo-value-indicator type="rangebar"
+															color="#f92f00"
+															[size]=25
+															offset="20">
+									</dxo-value-indicator>
+									<dxo-subvalue-indicator type="triangleMarker"
+															color="#fff">
+									</dxo-subvalue-indicator>
+									<dxo-geometry orientation="vertical"></dxo-geometry>
+									<dxo-scale [startValue]="0"
+											   [endValue]="weightValue.endValue"
+											   [tickInterval]="weightValue.tick">
+										<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+										<dxo-label [font]="{color:'#e7e6e6', size:'20px'}" [visible]="false"></dxo-label>
+									</dxo-scale>
+									<dxo-range-container>
+										<dxi-range [startValue]="0" [endValue]="weightValue.endValue" color="#1d252c"></dxi-range>
+									</dxo-range-container>
+								</dx-linear-gauge>
+							</div>
+						</div>
+					</div>
+					<div class="BrakeValues">
+						<div class="BrakeValues_cell">
+							<div class="valueBox">
+								<div class="valueBox_inside">
+									<div class="valueTitle">
+										<b>축중</b>
+									</div>
+									<div class="valueContent">
+										<b>{{weightValue.mean}}</b>kg
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gaugePanel">
+					<div class="gaugeTitle">
+						LEFT
+					</div>
+					<div class="lineGaugePanel">
+						<div class="lineGaugeBg">
+							<div class="lineGaugeComp">
+								<dx-linear-gauge id="leftLineGauge" class="lineGauge" [value]="leftValue.mean" [subvalues]="leftValue.subValue">
+									<dxo-range-container width="0"></dxo-range-container>
+									<dxo-value-indicator type="rangebar"
+															color="#f92f00"
+															[size]=25
+															offset="20">
+									</dxo-value-indicator>
+									<dxo-subvalue-indicator type="triangleMarker"
+															color="#fff">
+									</dxo-subvalue-indicator>
+									<dxo-geometry orientation="vertical"></dxo-geometry>
+									<dxo-scale [startValue]="0"
+											   [endValue]="leftValue.endValue"
+											   [tickInterval]="leftValue.tick">
+										<dxo-label [font]="{size:'20px'}"></dxo-label>
+										<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+										<dxo-label [font]="{color:'#e7e6e6', size:'20px'}" [visible]="false"></dxo-label>
+									</dxo-scale>
+									<dxo-range-container>
+										<dxi-range [startValue]="0" [endValue]="leftValue.endValue" color="#1d252c"></dxi-range>
+									</dxo-range-container>
+								</dx-linear-gauge>
+							</div>
+						</div>
+					</div>
+					<div class="BrakeValues">
+						<div class="BrakeValues_cell">
+							<div class="valueBox">
+								<div class="valueBox_inside">
+									<div class="valueTitle">
+										<b>좌 제동력</b>
+									</div>
+									<div class="valueContent">
+										<b>{{leftValue.mean}}</b>kg
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="gaugePanel">
+					<div class="gaugeTitle">
+						RIGHT
+					</div>
+					<div class="lineGaugePanel">
+						<div class="lineGaugeBg">
+							<div class="lineGaugeComp">
+								<dx-linear-gauge id="rightLineGauge" class="lineGauge" [value]="rightValue.mean" [subvalues]="rightValue.subValue">
+									<dxo-range-container width="0"></dxo-range-container>
+									<dxo-value-indicator type="rangebar"
+															color="#f92f00"
+															[size]=25
+															offset="20">
+									</dxo-value-indicator>
+									<dxo-subvalue-indicator type="triangleMarker"
+															color="#fff">
+									</dxo-subvalue-indicator>
+									<dxo-geometry orientation="vertical"></dxo-geometry>
+									<dxo-scale [startValue]="0"
+											   [endValue]="rightValue.endValue"
+											   [tickInterval]="rightValue.tick">
+										<dxo-label [font]="{size:'20px'}"></dxo-label>
+										<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+										<dxo-label [font]="{color:'#e7e6e6', size:'20px'}" [visible]="false"></dxo-label>
+									</dxo-scale>
+									<dxo-range-container>
+										<dxi-range [startValue]="0" [endValue]="rightValue.endValue" color="#1d252c"></dxi-range>
+									</dxo-range-container>
+								</dx-linear-gauge>
+							</div>
+						</div>
+					</div>
+					<div class="BrakeValues">
+						<div class="BrakeValues_cell">
+							<div class="valueBox">
+								<div class="valueBox_inside">
+									<div class="valueTitle">
+										<b>우 제동력</b>
+									</div>
+									<div class="valueContent">
+										<b>{{rightValue.mean}}</b>kg
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<analogTest></analogTest>
+	</div>
+</section>
+<!-- /.content -->
+

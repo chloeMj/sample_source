@@ -1,0 +1,160 @@
+<!-- Main content -->
+<section class="contentSection">
+	<div class="contentBox">
+		<div class="topMsgBar">
+			<div class="width_20">
+				<div class="padding_right_10">
+					<div class="testName msgBox lineHeight_110">
+						<b>43바2938</b>
+					</div>
+				</div>
+			</div>
+			<div class="flex_1">
+				<div>
+					<div class="statusText msgBox lineHeight_110">
+						<b>{{statusText}}</b>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="centerContents_outside">
+			<div class="centerContents">
+				<div class="display_inlineBox width_100 text_center">
+					<div class="resultValues">
+						<div class="floatLeft" style="width:33%;">
+							<span>축중 <span class="resultValue_num"><b>{{weightValue.mean}}</b></span>kg</span><!---->
+						</div>
+						<div class="floatLeft" style="width:33%;">
+							<span>합<span class="resultValue_num"><b>{{(((leftValue.mean+rightValue.mean) / weightValue.mean)*100).toFixed(1) > 1?(((leftValue.mean+rightValue.mean) / weightValue.mean)*100).toFixed(1):0}}</b></span>%</span>
+							<!--(((leftValue.mean+rightValue.mean) / weightValue.mean)*100).toFixed(1)-->
+						</div>
+						<div class="floatLeft" style="width:33%;">
+							<span>차 <span class="resultValue_num"><b>{{((absData / weightValue.mean)*100).toFixed(1) > 1 ? ((absData / weightValue.mean)*100).toFixed(1):0}}</b></span>%</span>
+							<!--((absData / weightValue.mean)*100).toFixed(1)-->
+						</div>
+					</div>
+				</div>
+				<div class="width_100" style="flex:1;">
+					<div class="columnLeft_50" style="display: flex;">
+						<div class="BrakeGaugePanel left">
+							<div class="lineGaugeBg">
+								<div class="lineGauge_outside">
+									<dx-linear-gauge class="lineGauge" [value]="leftValue.mean" [subvalues]="leftValue.subValue">
+										<dxo-range-container width="0"></dxo-range-container>
+										<dxo-value-indicator type="rangebar"
+																color="#f92f00"
+																[size]=25
+																offset="20">
+										</dxo-value-indicator>
+										<dxo-subvalue-indicator type="triangleMarker"
+																color="#fff">
+										</dxo-subvalue-indicator>
+										<dxo-geometry orientation="vertical"></dxo-geometry>
+										<dxo-scale [startValue]="0"
+													[endValue]="leftValue.endValue"
+													[tickInterval]="leftValue.tick">
+											<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+											<dxo-label [font]="{color:'#e7e6e6', size:'20px'}" [visible]="false"></dxo-label>
+										</dxo-scale>
+										<dxo-range-container>
+											<dxi-range [startValue]="0" [endValue]="leftValue.endValue" color="#1d252c"></dxi-range>
+										</dxo-range-container>
+									</dx-linear-gauge>
+								</div>
+							</div>
+						</div>
+						<div class="BrakeValues">
+							<div class="display_table">
+								<div class="display_table-cell">
+									<div class="valueBox">
+										<div class="valueBox_inside">
+											<div class="valueTitle">
+												<b>좌 제동력</b>
+											</div>
+											<div class="valueContent">
+												<b>{{leftValue.mean}}</b>kg
+											</div>
+										</div>
+									</div>
+									<div class="valueBox">
+										<div class="valueBox_inside">
+											<div class="valueTitle">
+												<b>좌 복원력</b>
+											</div>
+											<div class="valueContent">
+												<b>{{leftValue.release}}</b>kg
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="columnLeft_50" style="display: flex;">
+						<div class="BrakeGaugePanel left">
+							<div class="lineGaugeBg">
+								<div class="lineGauge_outside">
+									<dx-linear-gauge class="lineGauge" [value]="rightValue.mean" [subvalues]="rightValue.subValue">
+										<dxo-range-container width="0"></dxo-range-container>
+										<dxo-value-indicator type="rangebar"
+																color="#f92f00"
+																[size]=25
+																offset="20">
+										</dxo-value-indicator>
+										<dxo-subvalue-indicator type="triangleMarker"
+																color="#fff">
+										</dxo-subvalue-indicator>
+										<dxo-geometry orientation="vertical"></dxo-geometry>
+										<dxo-scale [startValue]="0"
+												[endValue]="rightValue.endValue"
+												[tickInterval]="rightValue.tick">
+											<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+											<dxo-label [font]="{color:'#e7e6e6', size:'20px'}" [visible]="false"></dxo-label>
+										</dxo-scale>
+										<dxo-range-container>
+											<dxi-range [startValue]="0" [endValue]="rightValue.endValue" color="#1d252c"></dxi-range>
+										</dxo-range-container>
+									</dx-linear-gauge>
+								</div>
+							</div>
+						</div>
+						<div class="BrakeValues">
+							<div class="display_table">
+								<div class="display_table-cell">
+									<div class="valueBox">
+										<div class="valueBox_inside">
+											<div class="valueTitle">
+												<b>우 제동력</b>
+											</div>
+											<div class="valueContent">
+												<b>{{rightValue.mean}}</b>kg
+											</div>
+										</div>
+									</div>
+									<div class="valueBox">
+										<div class="valueBox_inside">
+											<div class="valueTitle">
+												<b>우 복원력</b>
+											</div>
+											<div class="valueContent">
+												<b>{{rightValue.release}}</b>kg
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear_both">
+			</div>
+		</div>
+		<sub-footer></sub-footer>
+		<analogTest></analogTest>
+	</div>
+</section>
+
+
+
+

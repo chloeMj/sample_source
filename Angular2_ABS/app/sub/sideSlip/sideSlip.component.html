@@ -1,0 +1,152 @@
+<!-- Main content -->
+
+<section class="contentSection">
+	<div class="contentBox">
+		<div class="topMsgBar">
+			<div class="width_20">
+				<div class="padding_right_10">
+					<div class="testName msgBox">
+						<b>75나4531</b>
+					</div>
+				</div>
+			</div>
+			<div class="flex_1">
+				<div>
+					<div class="statusText msgBox">
+						<b>{{statusText}}</b>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="centerContents_outside">
+			<div class="centerContents">
+				<div class="centerContentPanels sideSlipGaugePanel">
+					<div class="sideslipGaugeBg">
+						<div class="sideslipGauge">
+							<dx-circular-gauge id="gauge" [value]="value.mean" [subvalues]="value.subValue">
+								<!--[value]="value.mean" [subvalues]="value.subValue"-->
+								<dxo-scale [startValue]="-10" [endValue]="10" [tickInterval]="value.tick">
+									<dxo-tick color="#e7e6e6" [visible]="false"></dxo-tick>
+									<dxo-label [font]="{color:'#e7e6e6', size:'30px'}" [visible]="false"></dxo-label>
+								</dxo-scale>
+								<dxo-geometry [startAngle]="-135"
+											  [endAngle]="-45">
+								</dxo-geometry>
+								<dxo-range-container width="0" [offset]="-65">
+									<dxi-range [startValue]="-10" [endValue]="-5" color="#f44242"></dxi-range>
+									<dxi-range [startValue]="-5" [endValue]="-3" color="#FFFF00"></dxi-range>
+									<dxi-range [startValue]="-3" [endValue]="3" color="#4ff441"></dxi-range>
+									<dxi-range [startValue]="3" [endValue]="5" color="#FFFF00"></dxi-range>
+									<dxi-range [startValue]="5" [endValue]="10" color="#f44242"></dxi-range>
+								</dxo-range-container>
+								<dxo-value-indicator type="TriangleNeedle" color="#fa2626" secondColor="#FF0000" [baseValue]=0 width="30" spindleSize="30" offset="50">
+								</dxo-value-indicator>
+								<dxo-subvalue-indicator type="TriangleNeedle"
+														color="#8ba09d" width="15" offset="80"
+														spindleGapSize="20" spindleSize="15">
+								</dxo-subvalue-indicator>
+
+							</dx-circular-gauge>
+						</div>
+						<div class="sideslipCurrentValue">
+							<div class="axisValue currentValue">
+								<!--<b>{{value.mean >= 0 ? value.mean:value.mean*-1}}</b> mm-->
+								<b>{{value.mean}}</b>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="centerContentPanels valuePanel">
+					<div style="position: relative;height: 100%;left: -15%;">
+						<div class="display_table">
+							<div class="display_table-cell">
+								<div class="valueBox">
+									<div class="valueBox_inside">
+										<div class="valueTitle">
+											<b>IN</b>
+										</div>
+										<div class="valueContent">
+											<b>{{inValue}}</b>mm
+										</div>
+									</div>
+								</div>
+								<div class="valueBox">
+									<div class="valueBox_inside">
+										<div class="valueTitle">
+											<b>OUT</b>
+										</div>
+										<div class="valueContent">
+											<b>{{outValue}}</b>mm
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--
+			<div class="width_50 height_100 floatLeft">
+				<div class="sideslipGaugePanel">
+					<div>
+						test
+					</div>
+					<div style="">
+						<div class="sideslipGauge sideslipContentLeft">
+							<div class="sideslipGauge_2">
+								<dx-circular-gauge id="gauge" [value]="value.mean" [subvalues]="value.subValue">
+									<dxo-scale [startValue]="-10" [endValue]="10" [tickInterval]="5">
+										<dxo-tick color="#e7e6e6"></dxo-tick>
+										<dxo-label [font]="{color:'#e7e6e6', size:'30px'}"></dxo-label>
+									</dxo-scale>
+									<dxo-geometry [startAngle]="-150"
+												  [endAngle]="-30">
+									</dxo-geometry>
+									<dxo-range-container width="25" [offset]="-55">
+										<dxi-range [startValue]="-10" [endValue]="-5" color="#f44242"></dxi-range>
+										<dxi-range [startValue]="-5" [endValue]="-3" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="-3" [endValue]="3" color="#4ff441"></dxi-range>
+										<dxi-range [startValue]="3" [endValue]="5" color="#FFFF00"></dxi-range>
+										<dxi-range [startValue]="5" [endValue]="10" color="#f44242"></dxi-range>
+									</dxo-range-container>
+									<dxo-value-indicator type="TriangleNeedle" color="#fff" secondColor="#FF0000" [baseValue]=0 width="10">
+									</dxo-value-indicator>
+
+								</dx-circular-gauge>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="width_50 height_100 floatLeft">
+				<div class="sideslipValues_table">
+					<div class="sideslipValues_cell">
+						<div class="inBoxOutLine axisValue margin_10">
+							<div class="axisValueBox valueBox">
+								<div class="inBoxTitle floatLeft">
+									<b>IN</b>
+								</div>
+								<div class="textAlign_right">
+									<b>{{value.subValue[0]}}</b> mm
+								</div>
+							</div>
+						</div>
+						<div class="outBoxOutLine axisValue margin_10">
+							<div class="axisValueBox valueBox">
+								<div class="floatLeft">
+									<b>OUT</b>
+								</div>
+								<div class="textAlign_right">
+									<b>{{value.subValue[1]}}</b> mm
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			-->
+			</div>
+		</div>
+		<sub-footer></sub-footer>
+	</div>
+</section>

@@ -1,0 +1,150 @@
+<!-- Main content -->
+<section class="contentSection">
+	<div class="header">
+		<div class="pageTitle">
+				종합판정결과
+		</div>
+	</div>
+	<div style="width: 100%; height: 100%;">
+		<div id="printResultPanel" style="width: 100%; height: 100%; border: 1px solid; box-sizing: border-box;">				
+			<div name="sideSlipResult">
+				<div class="panel">
+					<div class="panelTitle"><img class="panelTitleImg" src="/assets/image/bar_vertical_2.png">사이드 슬립</div>
+					<div class="fields">
+						<div>
+							<div class="formHeader">In</div>
+							<div class="value">{{nowResult.sideSlip_result[0].min}}</div>
+						</div>
+						<div>
+							<div class="formHeader">out</div>
+							<div class="value">{{nowResult.sideSlip_result[0].max}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div name="brakeResult">
+				<div class="panel">
+					<div class="panelTitle"><img class="panelTitleImg" src="/assets/image/bar_vertical_2.png">브레이크</div>
+					<div class="fields">
+						<div style="border:1px solid #1d252c;display: inline-block;box-sizing: border-box;">
+							<table>
+								<thead>
+									<tr class="columnHeader">
+										<th>
+											#
+										</th>
+										<th>
+											축중
+										</th>
+										<th>
+											좌제동
+										</th>
+										<th>
+											우제동
+										</th>
+										<th>
+											좌복원력
+										</th>
+										<th>
+											우복원력
+										</th>
+										<th>
+											P 좌
+										</th> 
+										<th>
+											P 우
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="testName">
+											F1
+										</td>
+										<td><span *ngIf="nowResult.brake_result[0].weight_max > 0" class="brakeResultUnit">{{nowResult.brake_result[0].weight_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[0].brake_left_max > 0" class="brakeResultUnit">{{nowResult.brake_result[0].brake_left_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[0].brake_right_max > 0" class="brakeResultUnit">{{nowResult.brake_result[0].brake_right_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[0].brake_left_release > 0" class="brakeResultUnit">{{nowResult.brake_result[0].brake_left_release}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[0].brake_right_release > 0" class="brakeResultUnit">{{nowResult.brake_result[0].brake_right_release}}</span></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="testName">
+											F2
+										</td>
+										<td><span *ngIf="nowResult.brake_result[1].weight_max > 0" class="brakeResultUnit">{{nowResult.brake_result[1].weight_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[1].brake_left_max > 0" class="brakeResultUnit">{{nowResult.brake_result[1].brake_left_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[1].brake_right_max > 0" class="brakeResultUnit">{{nowResult.brake_result[1].brake_right_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[1].brake_left_release > 0" class="brakeResultUnit">{{nowResult.brake_result[1].brake_left_release}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[1].brake_right_release > 0" class="brakeResultUnit">{{nowResult.brake_result[1].brake_right_release}}</span></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="testName">
+											R1
+										</td>
+										<td><span *ngIf="nowResult.brake_result[2].weight_max > 0" class="brakeResultUnit">{{nowResult.brake_result[2].weight_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[2].brake_left_max > 0" class="brakeResultUnit">{{nowResult.brake_result[2].brake_left_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[2].brake_right_max > 0" class="brakeResultUnit">{{nowResult.brake_result[2].brake_right_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[2].brake_left_release > 0" class="brakeResultUnit">{{nowResult.brake_result[2].brake_left_release}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[2].brake_right_release > 0" class="brakeResultUnit">{{nowResult.brake_result[2].brake_right_release}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[2].brake_parking_left > 0" class="brakeResultUnit">{{nowResult.brake_result[2].brake_parking_left}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[2].brake_parking_right > 0" class="brakeResultUnit">{{nowResult.brake_result[2].brake_parking_right}}</span></td>
+									</tr>
+									<tr>
+										<td class="testName">
+											R2
+										</td>
+										<td><span *ngIf="nowResult.brake_result[3].weight_max > 0" class="brakeResultUnit">{{nowResult.brake_result[3].weight_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[3].brake_left_max > 0" class="brakeResultUnit">{{nowResult.brake_result[3].brake_left_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[3].brake_right_max > 0" class="brakeResultUnit">{{nowResult.brake_result[3].brake_right_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[3].brake_left_release > 0" class="brakeResultUnit">{{nowResult.brake_result[3].brake_left_release}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[3].brake_right_release > 0" class="brakeResultUnit">{{nowResult.brake_result[3].brake_right_release}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[3].brake_parking_left > 0" class="brakeResultUnit">{{nowResult.brake_result[3].brake_parking_left}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[3].brake_parking_right > 0" class="brakeResultUnit">{{nowResult.brake_result[3].brake_parking_right}}</span></td>
+									</tr>
+									<tr>
+										<td class="testName">
+											R3
+										</td>
+										<td><span *ngIf="nowResult.brake_result[4].weight_max > 0" class="brakeResultUnit">{{nowResult.brake_result[4].weight_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[4].brake_left_max > 0" class="brakeResultUnit">{{nowResult.brake_result[4].brake_left_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[4].brake_right_max > 0" class="brakeResultUnit">{{nowResult.brake_result[4].brake_right_max}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[4].brake_left_release > 0" class="brakeResultUnit">{{nowResult.brake_result[4].brake_left_release}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[4].brake_right_release > 0" class="brakeResultUnit">{{nowResult.brake_result[4].brake_right_release}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[4].brake_parking_left > 0" class="brakeResultUnit">{{nowResult.brake_result[4].brake_parking_left}}</span></td>
+										<td><span *ngIf="nowResult.brake_result[4].brake_parking_right > 0" class="brakeResultUnit">{{nowResult.brake_result[4].brake_parking_right}}</span></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="columnHeader" colspan="2">브레이크 종합</td>
+										<td class="btResult pass" *ngIf="nowResult.bt_result == 1">합격</td>
+										<td class="btResult fail" *ngIf="nowResult.bt_result == 2">불합격</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div name="speedResult">
+				<div class="panel">
+					<div class="panelTitle"><img class="panelTitleImg" src="/assets/image/bar_vertical_2.png">스피드</div>
+					<div class="fields">
+						<div>
+							<div class="formHeader">측정값</div>
+							<div class="value">0</div><!--불합격class: fail, 합격 class: pass-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>

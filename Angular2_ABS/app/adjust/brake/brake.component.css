@@ -1,0 +1,155 @@
+
+.centerContents_outside {
+	background: none;
+	border: 0;
+	border-radius: 0;
+	margin-top: 0;
+}
+
+div.centerContents {
+	background: 0;
+	box-shadow: none;
+	background-image: none;
+	border: 0;
+	display: flex;
+}
+
+div.gaugePanel {
+	position: relative;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-right: 2px;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	background: white;
+	border: 2px solid #1d252c;
+	border-radius: 8px;
+	padding-bottom: 10px;
+}
+	div.gaugePanel div.gaugeTitle {
+		width: 100%;
+		font-weight: bold;
+		font-size: 50px;
+		background: #1d252c;
+		color: #dcdcdc;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+	}
+.lineGaugePanel {
+	flex: 1;
+	width: 100%;
+}
+
+.lineGaugeBg.weight {
+	background-image: url(/assets/image/gauge_awdBrake.png);
+}
+.lineGaugeBg {
+	display: table;
+	width: 100%;
+	height: 100%;
+	background-image: url(/assets/image/gauge_awdBrake.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 550px;
+}
+
+.lineGaugeComp {
+	margin: 0 auto;
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding-bottom: 79px;
+}
+
+.gauge {
+	min-height: 600px;
+	width: 100%;
+	height: auto;
+}
+
+.lineGauge_outside {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+}
+
+.lineGauge {
+	position: relative;
+	left: 38px;
+	width: 100%;
+	min-height: 410px;
+	height: auto;
+	/* margin-left: 282px; */
+}
+
+.brakeCurrentValue {
+	position: absolute;
+	top: 50%;
+    margin-top: 173px;
+    left: 50%;
+    margin-left: -102px;
+}
+
+.currentValue {
+    width: 200px;
+    text-align: right;
+    color: #e7e6e6;
+}
+
+.brakeAdjust {
+	position: absolute;
+	left: 62px;
+    bottom: 10px;
+	display: flex;
+	width: 435px;
+	margin: 0 auto;
+}
+
+.brakeAdjust_input {
+	flex: 1;
+	background: white;
+	border: 2px solid #1d252c;
+	border-radius: 8px;
+	box-sizing: border-box;
+	margin-right: 3px;
+	text-align: right;
+	font-size: 45px;
+	color: #000;
+	line-height: 90px;
+}
+	.brakeAdjust_input > input[type="number"] {
+		width: 70%;
+		text-align: right;
+		font-size: 50px;
+		border: 0;
+		line-height: 75px;
+		height: 75px;
+		border-radius: 8px;
+	}
+.brakeAdjust_btns {
+	display: flex;
+	flex-direction: column;
+}
+	.brakeAdjust_btns > div {
+		flex: 1;
+	}
+		.brakeAdjust_btns > div:first-child {
+			margin-bottom: 3px;
+		}
+		.brakeAdjust_btns > div:last-child {
+		}
+		.brakeAdjust_btns > div button.btn {
+			width: 100%;
+			height: 100%;
+			font-size: 1.5em;
+			border-width: 2px;
+			border-radius: 8px;
+			box-sizing: border-box;
+			padding: 2.5px 7px;
+		}
+

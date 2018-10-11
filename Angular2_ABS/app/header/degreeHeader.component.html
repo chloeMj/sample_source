@@ -1,0 +1,25 @@
+<div class="navbar">
+	<div>
+		<div class="logo">
+			<div>
+				<span>ABS 정도검사</span>
+			</div>
+		</div>
+		<div class="menubar">
+			<div>
+				<div class="mainMenu">
+					<a class="nav-link" (click)="routerLink('degree/sideSlip')" [ngClass]="{'selected':url == '/degree/sideSlip'}">사이드슬립</a>
+				</div>
+				<div class="mainMenu">
+					<a class="nav-link" (click)="routerLink('degree/brake')" [ngClass]="{'selected':url == '/degree/brake'}">브레이크</a>
+				</div>
+				<div class="mainMenu">
+					<a class="nav-link" (click)="routerLink('degree/speed')" [ngClass]="{'selected':url == '/degree/speed'}">속도</a>
+				</div>
+				<div class="mainMenu">
+					<a class="nav-link" (click)="goHome()">홈으로&nbsp;<fa name="sign-in"></fa></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

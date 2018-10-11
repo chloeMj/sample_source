@@ -1,0 +1,103 @@
+
+section.contentSection {
+	overflow-y: auto;
+}
+
+div.centerContents {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+div.columnLeft_50 {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.resultValues {
+	display: inline-block;
+	width: 100%;
+	margin: 15px 0;
+	line-height: 1.5em;
+	height: 80px;
+	background: #e7e6e6;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.23);
+	/*
+	border-radius: 15px;
+	*/
+	font-size: 3.3em;
+}
+.resultValue_num {
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+}
+
+.display_table {
+	position: relative;
+	left: -50px;
+}
+
+.BrakeValues {
+	flex:1;
+	height:100%;
+	display: table;
+	min-height: 470px;
+}
+
+.BrakeValues_cell {
+	display: table-cell;
+	vertical-align: middle;
+	/*line-height: 4em;*/
+	font-size: 2.5em;
+}
+
+.valueBox {
+	max-width: 400px;
+	min-width: 300px;	
+	margin: 10px 0;
+}
+
+	.valueBox .valueBox_inside {
+		font-size: 40px;
+	}
+	.valueBox .valueBox_inside .valueTitle {
+		width: 177px;
+	}
+	.valueBox .valueBox_inside .valueContent {
+		/* font-size: 45px; */
+	}
+
+	.padding_top_5 {
+		padding-top: 5%;
+	}
+
+.BrakeGaugePanel {
+	width:650px;
+	height:100%;
+	box-sizing: border-box;
+}
+.lineGaugeBg {
+	display: table;
+	width: 100%;
+	height: 100%;
+	background-image: url(/assets/image/line_gauge.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 500px;
+}
+.lineGauge_outside {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.lineGauge {
+	width: 100%;
+	min-height: 410px;
+	height: auto;
+	position: relative;
+	left: 38px;
+}
+

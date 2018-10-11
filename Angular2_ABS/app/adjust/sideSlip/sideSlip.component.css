@@ -1,0 +1,181 @@
+
+.centerContents_outside {
+	margin-top: 0;
+}
+
+.centerContents {
+	color: #e7e6e6;
+	min-height: 600px;
+}
+
+	.centerContents > .centerContentPanels {
+		/*display: table-cell;*/
+		float: left;
+		height: 100%;
+		box-sizing: border-box;
+	}
+
+.sideSlipGaugePanel {
+	width: 63%;
+	height: 100%;
+}
+
+.sideslipGauge_outside {
+	display: table;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url(/assets/image/gauge_sideSlip.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 600px;
+}
+
+.sideslipGauge {
+	margin: 0 auto;
+	width: 500px;
+	/* height: 500px; */
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding-bottom: 93px;
+}
+
+#gauge {
+	min-height: 500px;
+	width: 100%;
+	height: auto;
+}
+
+.sideslipCurrentValue {
+	position: absolute;
+	top: 50%;
+	margin-top: 167px;
+	left: 50%;
+	margin-left: -120px;
+}
+
+.currentValue {
+    width: 230px;
+    text-align: right;
+}
+
+.sideSlipValuePanel {
+	width: 37%;
+	vertical-align: middle;
+	font-size: 3.8em;
+}
+
+div.adjustBtns {
+	/* 
+	display: flex;
+	max-width: 500px;
+	height: 142px;
+	padding: 5px;
+	background: #eaeaea;
+	border: 1px solid #8e8e8e;
+	border-radius: 8px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.30), 0 3px 6px rgba(0,0,1,0.30);
+	*/
+	box-sizing: border-box;
+
+	max-width: 500px;
+    min-width: 410px;
+}
+
+	div.adjustBtns > div.adjustZero {
+		width: 100%;
+		padding-bottom: 4px;
+	}
+	div.adjustBtns > div.adjustZero > div {
+		color: #000;
+		text-align: right;
+		margin: 0;
+		font-size: 65px;
+	}
+	div.adjustBtns > div.adjustZero button.btn {
+		width: 125px;
+		height: 65px;
+		font-size: 25px;
+		border-radius: 8px;
+		border-width: 2px;
+		box-shadow: 5px 5px 5px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,1,0.20);
+	}
+div.adjustBtns > div.adjustValues {
+}
+	div.adjustBtns > div.adjustValues .row {
+		display: flex;
+		padding-bottom: 2px;
+	}
+		div.adjustBtns > div.adjustValues .row:last-child {
+			padding-top:2px;
+			padding-bottom: 0;
+			box-sizing: border-box;
+		}
+		div.adjustBtns > div.adjustValues .row div {
+			flex: 1;
+			/*
+			background: white;
+			font-size: 45px;
+			border: 2px solid #1d252c;
+			border-radius: 8px;
+			box-sizing: border-box;
+			margin-right: 5px;
+			font-size: 50px;
+			*/
+			color: #000;
+			text-align: right;
+
+			margin: 0;
+			margin-right: 5px;
+			font-size: 65px;
+		}
+			div.adjustBtns > div.adjustValues .row div > input[type="number"] {
+				width: 65%;
+				height: 90px;
+				font-size: 65px;
+				border: 0;
+				text-align: right;
+			}
+		div.adjustBtns > div.adjustValues .row button {
+			width: 125px;
+			font-size: 25px;
+			border-radius: 8px;
+			border-width: 2px;
+			box-shadow: 5px 5px 5px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,1,0.20);
+		}
+
+/*
+		.adjustBtns button.btn.btnZero {
+			height: 181px;
+			width: 90px;
+			margin-right: 3px;
+		}
+.adjustValues {
+	clear: both;
+}
+.adjustValues:last-child {
+	margin-top: 3px;
+}
+	.adjustValues > div {
+		width: 260px;
+		float: left;
+		border: 1px solid #1d252c;
+		border-radius: 8px;
+		box-sizing: border-box;
+		padding: 5px;
+		margin-right: 3px;
+		background: white;
+	}
+		.adjustValues > div input {
+			width: 100%;
+			text-align: right;
+			font-size: 50px;
+			border: 0;
+			line-height: 75px;
+			height: 75px;
+			vertical-align: text-bottom;
+			border-radius: 8px;
+		}
+		*/
